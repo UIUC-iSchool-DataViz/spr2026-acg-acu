@@ -392,9 +392,9 @@ There'll be a few more along the way.
 
 ## CampusWire
 
-We will be sharing a slack channel with the in-person class, so feel free to converse with them as well!
+We will be sharing a Campuswire channel with the in-person class, so feel free to converse with them as well!
 
- * Team channel at `https://is445-spr2025.slack.com`
+ * Team channel at `[https://is445-spr2025.slack.com](https://campuswire.com/p/GC79A285B)`
    * `#general` : General announcements, place to ask questions
    * `#random` : see a cool viz you want to share?  This is the place!
    * `#introduce-yourself` : where you want to "say hi" for Homework #1
