@@ -58,18 +58,30 @@ This could consist of drawings, prototypes of web pages or notebooks, and the co
 
 You should walk me through the process of how you built your observatory, and it does not need to be a linear, successes-only process.
 
+This will include your in-class presentation of the work. You will also have five minutes, as a *group*, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process.  These presentations will be the 8th of December, the final class date.
+
 
 ---
 
 # Final Project: Part Three
 
-The final component of your project will be an in-class presentation of your work, and the deployment of that work online.  This will be worth **30 points out of 100**.
+The final component of your project will be a deployment of your work online.  This will be worth **30 points out of 100**.
 
-Your "observatory" should be located somewhere online, either as a notebook I can download and run (or that runs on [binder](https://mybinder.org/)) or view on observable, starboard, or Github Pages.
+This should be deployed on HuggingFace, which we will demonstrate later today.  They should be fully-executable and need to include a mechanism for "checking for new data."
 
-You will also have five minutes, as a *group*, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process.
+---
 
-These presentations will be on the 4th of December.  The project will be due by the end of finals week, but you are **strongly encouraged** to submit earlier.
+# Final Project Summary
+
+| Points | Description | Requires Code |
+|-|-|
+| 30 | Your own exploration of a dataset. | Yes |
+| 40 | You and your group designing, then presenting your design, to class. | No |
+| 30 | A final deployment of your project on HuggingFace. | Yes |
+
+* You will use *your own datasets* for part 1.  This is **on your own**.
+* Your group will choose from those datasets for parts 2 and 3.
+* Part 3 will be a deployment on HuggingFace.
 
 ---
 
