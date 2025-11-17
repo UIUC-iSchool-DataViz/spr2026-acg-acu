@@ -74,7 +74,7 @@ This should be deployed on HuggingFace, which we will demonstrate later today.  
 # Final Project Summary
 
 | Points | Description | Requires Code |
-|-|-|
+|-|-|-|
 | 30 | Your own exploration of a dataset. | Yes |
 | 40 | You and your group designing, then presenting your design, to class. | No |
 | 30 | A final deployment of your project on HuggingFace. | Yes |
