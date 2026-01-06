@@ -30,8 +30,7 @@ jobs:
       - name: Verify Links (HTML Proofer)
         run: |
           bundle exec htmlproofer ./_site \
-            --allow-hash-href \
-            --check-html \
-            --disable-external
-        # Note: --disable-external is used here to focus on internal links first.
+            --checks "Links,Images,Scripts,HtmlCheck" \
+            --ignore-urls "/^http/,/^#/"
+        # Note: --ignore-urls "/^http/" is used to focus on internal links first.
         # You can remove it later to check all external URLs as well.
