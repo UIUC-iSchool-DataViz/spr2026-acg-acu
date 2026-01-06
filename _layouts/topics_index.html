@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-thirds">
+        <h1>Course Topics</h1>
+        <p>
+          Explore the curriculum organized by conceptual theme. You can also
+          view materials by <a href="{{ '/' | relative_url }}">week</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% assign sorted_pages = site.html_pages | sort:"path" %} {% for topic in
+site.data.topics %}
+<section class="section">
+  <div class="container">
+    <h2 class="title">{{ topic.name }}</h2>
+    <p class="subtitle">{{ topic.description }}</p>
+    <hr />
+
+    <div class="columns is-multiline">
+      {% for week_num in topic.weeks %} {% capture week_dir %}/week{% if
+      week_num < 10 %}0{% endif %}{{ week_num }}/{% endcapture %} {% assign
+      week_landing = sorted_pages | where: "dir", week_dir | where: "layout",
+      "week" | first %} {% assign subpages = sorted_pages | where: "dir",
+      week_dir %} {% assign lectures = subpages | where: "layout", "lecture" |
+      sort: "date" %} {% if week_landing or lectures.size > 0 %}
+      <div class="column is-half">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Week {{ week_num }}: {{ week_landing.title }}
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <ul>
+                {% for lecture in lectures %}
+                <li>
+                  <a href="{{ lecture.url | relative_url }}"
+                    >{{ lecture.title }}</a
+                  >
+                </li>
+                {% endfor %} {% for example in week_landing.examples %}
+                <li>
+                  <span class="tag is-info is-light">Notebook</span>
+                  {% if example.type == "ipynb" %}
+                  <a
+                    href="{{ '/nbv.html?notebook_name=' | relative_url }}{{ week_dir | append: example.filename | relative_url | url_encode }}"
+                    >{{example.title}}</a
+                  >
+                  {% else %}
+                  <a
+                    href="{{ week_dir | append: example.filename | relative_url }}"
+                    >{{example.title}}</a
+                  >
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <footer class="card-footer">
+            <a
+              href="{{ week_landing.url | relative_url }}"
+              class="card-footer-item"
+              >View Week {{ week_num }} Page</a
+            >
+          </footer>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}

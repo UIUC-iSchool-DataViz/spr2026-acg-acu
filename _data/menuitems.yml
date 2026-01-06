@@ -1,3 +1,7 @@
+- name: Topics
+  url: /topics/
+  faicon: fa-layer-group
+  weight: 5
 - name: Syllabus
   url: /syllabus
   faicon: fa-book

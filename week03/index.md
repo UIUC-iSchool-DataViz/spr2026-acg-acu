@@ -16,7 +16,7 @@ examples:
     type: ipynb
     title: Prep Notebook, Week 3
     description: Prep notebook for this week
-  - filename: inClass_week03-spr2025.ipynb
+  - filename: inClass_week03_previous.ipynb
     type: ipynb
     title: In class notebook, Week 3, Previous Semester
     description: In class work from a previous semester week 03
