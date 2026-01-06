@@ -52,7 +52,7 @@ site.data.topics %}
                   <span class="tag is-info is-light">Notebook</span>
                   {% if example.type == "ipynb" %}
                   <a
-                    href="{{ '/nbv.html?notebook_name=' | relative_url }}{{ week_dir | append: example.filename | relative_url | url_encode }}"
+                    href="{{ week_dir | append: example.filename | replace: '.ipynb', '.html' | relative_url }}"
                     >{{example.title}}</a
                   >
                   {% else %}
