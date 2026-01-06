@@ -1,0 +1,33 @@
+name: Verify Site Links
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1" # Jekyll 3.9 works well with Ruby 3.x
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Verify Links (HTML Proofer)
+        run: |
+          bundle exec htmlproofer ./_site \
+            --allow-hash-href \
+            --check-html \
+            --disable-external
+        # Note: --disable-external is used here to focus on internal links first.
+        # You can remove it later to check all external URLs as well.

@@ -1,11 +1,9 @@
 # Jupytext configuration
 # This file controls how notebooks are synced to other formats.
 
-# We use ipynb for the notebook, py:percent for code, and md:myst for Jekyll rendering.
+# We pair the ipynb with both a python script and a myst markdown file.
 formats = "ipynb,py:percent,md:myst"
 
-# Allow Jekyll-specific metadata (layout, title, etc.) to pass through to the Markdown front matter.
+# Allow Jekyll metadata to pass through.
 notebook_metadata_filter = "layout,title"
-
-# Keep cell metadata clean
 cell_metadata_filter = "-all"
