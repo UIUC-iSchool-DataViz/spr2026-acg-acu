@@ -11,6 +11,7 @@ tags:
 description: >-
   The foundations of interactivity, and how we can think about it and how we use it. We introduce a little bit of javascript, how to publish websites on GitHub,
   and we start learning vega-lite.
+date: 2026-02-09
 ---
 
 ## Status Update: Concepts
@@ -60,7 +61,6 @@ description: >-
 - Dynamic data (dashboarding)
 - Advanced utilization of tools
 
-
 ---
 
 ## Interactivity
@@ -85,9 +85,7 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 - Axis limits/bounds
 - Transform/scale
 
-
 ---
-
 
 ## Interactivity: Parameters
 
@@ -97,16 +95,13 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 - Rectangle zoom
 - Adjustment
 
-
 ---
 
 ## Interactivity: Linking & Brushing
 
 <!-- .slide: data-background-image="images/brushlink_02.svg" data-background-size="80% auto" data-background-position="right 50% bottom 50%" -->
 
-
 ---
-
 
 ## Interactivity: Linking & Brushing
 
@@ -114,9 +109,7 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 `filter( variable2 > variable1 )`
 
-
 ---
-
 
 ## Interactivity: Linking & Brushing
 
@@ -124,9 +117,7 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 `filter( variable2 > variable1 )`
 
-
 ---
-
 
 ## Interactivity: Linking & Brushing
 
@@ -134,22 +125,17 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 `filter( variable2 > variable1 )`
 
-
 ---
-
 
 ## Interactivity: Linking & Brushing
 
 <!-- .slide: data-background-image="images/brushlink_05.svg" data-background-size="80% auto" data-background-position="right 50% bottom 50%" -->
 
-
 ---
-
 
 ## Interactivity: Linking & Brushing
 
 <!-- .slide: data-background-image="images/brushlink_06.svg" data-background-size="80% auto" data-background-position="right 50% bottom 50%" -->
-
 
 ---
 
@@ -174,7 +160,6 @@ What are methods of showing "linked" and "brushed" data if you have:
 - Histogram
 - Field / image plot
 
-
 ---
 
 # The Web
@@ -182,7 +167,6 @@ What are methods of showing "linked" and "brushed" data if you have:
 - Content is transmitted from point-to-point
 - Content can be manipulated locally or remotely
 - Not all servers can manipulate data before sending
-
 
 ---
 
@@ -192,12 +176,11 @@ This is an interesting example of the kind of visualization the web makes possib
 
 https://www.vox.com/policy-and-politics/2018/9/28/17914308/kavanaugh-ford-question-dodge-hearing-chart
 
-
 ---
 
 # Your Browser
 
-- Your browser contains -- essentially -- an entire operating system.  It can
+- Your browser contains -- essentially -- an entire operating system. It can
   manage:
   - Display mechanisms
   - Interaction with you, the user
@@ -222,14 +205,13 @@ The Document Object Model (DOM) is how we interact with the collection of HTML
 objects in our document.
 
 For instance, a page can be composed of `<div>` objects, `<p>` objects, etc,
-and we can construct and interact with these.  This includes things like
-modifying style sheets.  See, for example, the
+and we can construct and interact with these. This includes things like
+modifying style sheets. See, for example, the
 [jsfiddle](https://jsfiddle.net/) for [jQuery
 boilerplate](https://jsfiddle.net/boilerplate/jquery).
 
 One alternative, as we will see, is to have rendering tied to data and data
 values, and to have those automatically update as needed.
-
 
 ---
 
@@ -265,7 +247,7 @@ print("Request completed!")
 
 # Asynchronous programming
 
-In Javascript, we would tell the code to fetch, but we would also tell it what to do *after* it finished.
+In Javascript, we would tell the code to fetch, but we would also tell it what to do _after_ it finished.
 
 This uses jQuery, but you can [do it without that](http://youmightnotneedjquery.com/#json).
 
@@ -284,7 +266,7 @@ Note that you can't always get this to work. In fact, that example won't even wo
 
 # Async and Event-Driven
 
-Async is how we can think about event driven programming, as well.  We have
+Async is how we can think about event driven programming, as well. We have
 done this using `traitlets` and `ipywidgets` in Python, and we will do it here
 as well.
 
@@ -301,7 +283,7 @@ button.on("click", function() {
 # Updating variables
 
 If you have an array of objects, there are three very handy functions you can
-utilize: `slice`, `forEach` and `filter`.  If you have an object, you can
+utilize: `slice`, `forEach` and `filter`. If you have an object, you can
 update it either by accessing a property with a period (`obj.something`) or by
 accessing it like you would a dictionary in python (`obj['something']`).
 
@@ -339,15 +321,13 @@ var myArray = ["Hello", "I", "am", "here", "now"];
 myArray.slice(3).forEach(word => console.log(word));
 ```
 
-
 ---
 
 # Publishing a Website
 
-We will utilize `github.com` for publishing.  When you use Github for publishing a website, it will be deployed at `username.github.io` (where `username` is your username!)
+We will utilize `github.com` for publishing. When you use Github for publishing a website, it will be deployed at `username.github.io` (where `username` is your username!)
 
 GitHub has a tutorial at [pages.github.com](https://pages.github.com/).
-
 
 ---
 
@@ -372,29 +352,21 @@ Other environments, like Visual Studio Code or Atom, also work well for this.
 
 # GitHub Pages: Adding a page
 
-Create a file -- you can do this within JupyterHub or from the command line -- called `index.html`.  It can contain anything, for instance:
+Create a file -- you can do this within JupyterHub or from the command line -- called `index.html`. It can contain anything, for instance:
 
 ```html
-&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;This is the title of the webpage!&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;p&gt;
-      This is an example paragraph. Anything in the &lt;strong&gt;body&lt;/strong&gt;
-      tag will appear on the page, just like this &lt;strong&gt;p&lt;/strong&gt;
-      tag and its contents.
-      &lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+&lt;!doctype html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;This is the title
+of the webpage!&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt; This is an
+example paragraph. Anything in the &lt;strong&gt;body&lt;/strong&gt; tag will
+appear on the page, just like this &lt;strong&gt;p&lt;/strong&gt; tag and its
+contents. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;
 ```
 
 ---
 
 # GitHub Pages: Publishing
 
-You will need to add the page to your repository.  You can do this with:
+You will need to add the page to your repository. You can do this with:
 
 `git add index.html`
 
@@ -409,25 +381,23 @@ Your commit message can me anything. This will need to be "pushed" to GitHub, wi
 After a few moments, it should be accessible at `https://username.github.io/`
 where `username` is, again, your username.
 
-
 ---
 
 # vega-lite
 
-Up until now, we have *mostly* written code that is _imperative_.
+Up until now, we have _mostly_ written code that is _imperative_.
 
-This means we have described *how* we wanted to have things accomplished, rather than *what* we want to accomplish.  vega-lite is a declarative grammar for (interactive) visualizations that allows us to specify the connection between components.
+This means we have described _how_ we wanted to have things accomplished, rather than _what_ we want to accomplish. vega-lite is a declarative grammar for (interactive) visualizations that allows us to specify the connection between components.
 
-We will utilize an interactive editor for vega-lite.  This helps us to ease some of the pains of correctly writing JSON, of knowing what we can and cannot use in a given spot, and it also provides us with lots of [sample datasets](https://github.com/vega/vega-datasets).
+We will utilize an interactive editor for vega-lite. This helps us to ease some of the pains of correctly writing JSON, of knowing what we can and cannot use in a given spot, and it also provides us with lots of [sample datasets](https://github.com/vega/vega-datasets).
 
 https://vega.github.io/editor/#/custom/vega-lite
-
 
 ---
 
 ## vega-lite: specification
 
-vega-lite visualizations are defined in a JSON specification.  This
+vega-lite visualizations are defined in a JSON specification. This
 specification will typically take a form similar to this:
 
 ```json
@@ -435,7 +405,7 @@ specification will typically take a form similar to this:
   "data": .. ,
   "transform": [ .. ],
   "mark": .. ,
-  "selection": .. ,
+  "params": [ .. ],
   "encoding": .. ,
   "config": ..
 }
@@ -449,7 +419,6 @@ The syntax you will need to be the most familiar with:
   `min`, `max`, `count`
 - [`type`](https://vega.github.io/vega-lite/docs/type.html): `quantitative`, `temporal`, `ordinal`, or `nominal`
 
-
 ---
 
 # vega-lite syntax
@@ -458,7 +427,7 @@ From the vega-lite examples, you can make a bar chart that is an aggregate like 
 
 ```
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "data/movies.json"},
   "mark": "bar",
   "encoding": {
@@ -479,6 +448,6 @@ From the vega-lite examples, you can make a bar chart that is an aggregate like 
 
 # vega-lite syntax
 
-There are several mechanisms by which we describe data representations in vega-lite, but the overarching principle is that it is declarative.  We define what it does based on what we say we want it to look like.
+There are several mechanisms by which we describe data representations in vega-lite, but the overarching principle is that it is declarative. We define what it does based on what we say we want it to look like.
 
 (The place where this is no longer true is when we modify `datum` values, but we'll get to that next time.)

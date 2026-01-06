@@ -8,7 +8,7 @@ description: >-
   The syllabus for the course, along with discussions about "what"
   visualizations are, why we make them, and how to orient yourself in the
   course.
-date: 2024-01-16
+date: 2026-01-12
 ---
 
 
@@ -36,7 +36,7 @@ Office Hours: **By appointment**
 - Yilin Xia - `yilinx2@illinois.edu`
 - Jingyuan Chen - `jc190@illinois.edu`
 
-https://uiuc-ischool-dataviz.github.io/fall2025-acg-acu/
+https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/
 
 ---
 <!-- slide template="[[blank-slide]]" -->
@@ -45,7 +45,7 @@ https://uiuc-ischool-dataviz.github.io/fall2025-acg-acu/
 
 - Grades and assignment links will be on [Canvas](https://canvas.illinois.edu/).
 - PrairieLearn: https://us.prairielearn.com/pl/course_instance/192343 where assignments will be completed.
-- Course repo is at [UIUC-iSchool-DataViz/fall2025-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2025-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/fall2025-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2025-acg-acu). Lecture notes, notebooks, data and course info will be placed there.
+- Course repo is at [UIUC-iSchool-DataViz/spr2026-acg-acu](https://github.com/UIUC-iSchool-DataViz/spr2026-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/spr2026-acg-acu/](https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/). Lecture notes, notebooks, data and course info will be placed there.
 - CampusWire: https://campuswire.com/c/GC79A285B - the best place to ask questions in a channel either about the homework or about the general discussion of a language or framework.
 
 You are invited to clone the repo, fork and submit changes (typos, etc!), and to use any information in it in the future.
@@ -99,12 +99,13 @@ However, PrairieLearn has a working installation you may also choose to use.
 ## Syllabus
 
  * Week 1 (Today) - Introduction
- * Week 2 - Data Storage and Operations
- * Week 3 - Types of Viz and Choosing Colors
- * Week 4 - Beginning interactivity
- * Week 5 - Continuing interactivity with bqplot
- * Week 6 - More with dashboards & Map Viz (**this class might be "flipped"**)
- * Week 7 - Maps, maps and more maps
+ * Week 2 - MLK Day Holiday
+ * Week 3 - Data Storage and Operations
+ * Week 4 - Types of Viz and Choosing Colors
+ * Week 5 - Beginning interactivity
+ * Week 6 - Continuing interactivity with bqplot
+ * Week 7 - More with dashboards & Map Viz (**this class might be "flipped"**)
+ * Week 8 - Maps, maps and more maps
  
 notes:
 This is a rough syllabus!  These are many of the topics we will cover, but
@@ -394,7 +395,7 @@ There'll be a few more along the way.
 
 We will be sharing a Campuswire channel with the in-person class, so feel free to converse with them as well!
 
- * Team channel at `[https://is445-spr2025.slack.com](https://campuswire.com/p/GC79A285B)`
+ * CampusWire channel at [https://campuswire.com/p/GC79A285B](https://campuswire.com/p/GC79A285B)
    * `#general` : General announcements, place to ask questions
    * `#random` : see a cool viz you want to share?  This is the place!
    * `#introduce-yourself` : where you want to "say hi" for Homework #1

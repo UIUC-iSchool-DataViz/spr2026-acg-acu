@@ -6,21 +6,21 @@ notitle: true
 examples:
   - filename: week04-inclass.ipynb
     type: ipynb
-    title: In Class Examples from Spring 2025
+    title: In Class Examples from Previous Semesters
   - filename: week04-inclass-02.ipynb
     type: ipynb
-    title: In Class Examples from Spring 2025 part 2
+    title: In Class Examples from Previous Semesters part 2
   - filename: lecture04_examples.ipynb
     type: ipynb
-    title: In Class Examples from Fall 2024
+    title: Supplemental Examples 1
   - filename: ipywidgets_intro.ipynb
     type: ipynb
     title: Intro to ipywidgets
-    description: The Spring 2024 ipywidgets examples
+    description: Supplemental Examples 2
   - filename: bqplot_intro.ipynb
     type: ipynb
     title: bqplot examples
-    description: The Spring 2024 bqplot examples
+    description: Supplemental Examples 3
   - filename: lecture07_examples.ipynb
     type: ipynb
     title: Traitlets and Widgets

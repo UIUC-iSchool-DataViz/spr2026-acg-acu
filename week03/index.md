@@ -18,8 +18,8 @@ examples:
     description: Prep notebook for this week
   - filename: inClass_week03-spr2025.ipynb
     type: ipynb
-    title: In class notebook, Week 3, Spring 2025
-    description: In class work from Spring 2025 week 03
+    title: In class notebook, Week 3, Previous Semester
+    description: In class work from a previous semester week 03
   - filename: inClass_week03.ipynb
     type: ipynb
     title: In class notebook, Week 3

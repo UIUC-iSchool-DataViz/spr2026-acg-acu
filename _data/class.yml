@@ -18,7 +18,7 @@ tas:
 course:
   name: Data Visualization
   number: IS445
-  semester: Fall 2025
+  semester: Spring 2026
   section: ACG-ACU
   location: Turner Hall, room W109
   time: Mondays, 9:00AM-11:50AM
@@ -26,10 +26,10 @@ course:
 urls:
   -
     name: Canvas
-    url: https://canvas.illinois.edu/courses/58975
+    url: https://canvas.illinois.edu/courses/TODO_NEW_ID
   -
     name: Course Materials
-    url: https://uiuc-ischool-dataviz.github.io/fall2025-acg-acu/
+    url: https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/
   -
     name: Github
-    url: https://github.com/UIUC-iSchool-DataViz/fall2025-acg-acu/
+    url: https://github.com/UIUC-iSchool-DataViz/spr2026-acg-acu/
