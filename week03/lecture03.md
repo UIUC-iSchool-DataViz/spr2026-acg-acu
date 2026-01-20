@@ -8,7 +8,7 @@ tags:
   - transformations
 description: >-
   How are values transformed from 0's and 1's into values we can manipulate and understand?  When we draw something on a screen, how do we represent that internally, and how is that translated into pixels?  What operations can we do on data? How do colors work?  What are the different ways we can map colors to values?  What should we keep in mind when doing this?
-date: 2023-09-11
+date: 2026-02-03
 ---
 
 ## Scaling Data
@@ -21,7 +21,7 @@ We will need to transform data in order to apply consistent visual encoding.
 There are many reasons we may need to accomplish this, including color mapping,
 applying units, and co-registration or normalization of data.
 
-One of the most important transformations we will have is that of an [Affine transformation](https://en.wikipedia.org/wiki/Affine_transformation).  This is a transformation that preserves:
+One of the most important transformations we will have is that of an [Affine transformation](https://en.wikipedia.org/wiki/Affine_transformation). This is a transformation that preserves:
 
 - Collinearity
 - Parallellism
@@ -29,9 +29,7 @@ One of the most important transformations we will have is that of an [Affine tra
 - Ratios of parallel lines
 - Barycenters of point sets
 
-
 ---
-
 
 ## Transformations
 
@@ -41,9 +39,7 @@ $ \vec{y} = A\vec{x} + \vec{b} $
 
 <!-- .slide: data-background-image="images/affine_1.svg" data-background-size="30% auto" data-background-position="right 20% bottom 50%" -->
 
-
 ---
-
 
 ## Transformations
 
@@ -57,9 +53,7 @@ We can use these to accomplish:
 
 <!-- .slide: data-background-image="images/affine_2.svg" data-background-size="30% auto" data-background-position="right 20% bottom 50%" -->
 
-
 ---
-
 
 ## Transformations
 
@@ -74,9 +68,7 @@ We can use these to accomplish:
 
 <!-- .slide: data-background-image="images/affine_3.svg" data-background-size="30% auto" data-background-position="right 20% bottom 50%" -->
 
-
 ---
-
 
 ## Transformations
 
@@ -92,19 +84,16 @@ We can use these to accomplish:
 
 <!-- .slide: data-background-image="images/affine_4.svg" data-background-size="30% auto" data-background-position="right 20% bottom 50%" -->
 
-
 ---
-
 
 ## Transformations
 
 <div class="col" data-markdown=true>
 
-In this figure, we can adjust the mixing vectors and the offset.  What do you notice about colinear points and parallel lines?
+In this figure, we can adjust the mixing vectors and the offset. What do you notice about colinear points and parallel lines?
 
 <div class="fig-container" data-style="height: 600px;" data-file="figures/affine_transformation.html" data-markdown=true>
 </div>
-
 
 ---
 
@@ -123,9 +112,7 @@ and then, given a color mapping function, assign to this a given color:
 
 $f(v') \rightarrow (R, G, B)$
 
-
 ---
-
 
 ## Scales and Scaling
 
@@ -160,7 +147,6 @@ via Wikimedia Commons
 ## Color Responsivity Function
 
 <!-- .slide: data-background-image="images/resp.png" data-background-size="auto 75%" -->
-
 
 ---
 
@@ -202,7 +188,7 @@ also hard to accurately mark where our specific one is.
 <img src="images/hereIsAColor_allAnn.png" height="600"/>
 
 notes: here is another example - you'll see these codes a lot of you do html programming, but its another way to
-specify colors with HEX numbers.  You'll note our color isn't listed here, but in a longer table it would be.
+specify colors with HEX numbers. You'll note our color isn't listed here, but in a longer table it would be.
 
 Hexadecimal only shows 16 million colors, RGB as uncompressed floats can theoretically represent quite a bit more (but there's a limitation of what monitors can display)
 
@@ -284,7 +270,7 @@ We choose 50% saturation - i.e. how much of the color is in there where minimum 
 
 We also choose 50% "L" which is sometimes called "V" for Luminiance which controls white-to-black
 
-And here is one more channel = A for opacity.  Note that "A" sort of overlaps with both Saturation and Luminance so its usually not used to encode anything if we are using the others.
+And here is one more channel = A for opacity. Note that "A" sort of overlaps with both Saturation and Luminance so its usually not used to encode anything if we are using the others.
 
 ---
 
@@ -305,26 +291,25 @@ And here is one more channel = A for opacity.  Note that "A" sort of overlaps wi
 notes:
 It's worth noting that "color words" are not consistent across languages or cultures. Color is a product of culture.
 
-
 ---
 
 ## "Naming" Colors: Summary
 
- * Color spaces 
-   * HSV (Hue, saturation, value)
-   * [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space)
-   * sRGB, Adobe sRGB
- * RGB triplets, sometimes compressed into hexadecimel ("#00FFAA", etc)
- * List of colors by name
-   * [Web](https://www.w3schools.com/colors/colors_names.asp)
-   * [matplotlib](https://matplotlib.org/2.0.2/examples/color/named_colors.html)
+- Color spaces
+  - HSV (Hue, saturation, value)
+  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space)
+  - sRGB, Adobe sRGB
+- RGB triplets, sometimes compressed into hexadecimel ("#00FFAA", etc)
+- List of colors by name
+  - [Web](https://www.w3schools.com/colors/colors_names.asp)
+  - [matplotlib](https://matplotlib.org/2.0.2/examples/color/named_colors.html)
 
-note: 
+note:
 coding environments will often provide "named" colors if you're more interested in simplicity than flexible design
- 
+
 HSV is typically a color space used by color designers.
 
-sRGB "standard RGB" is a color space that was standardized to unify different monitors and printers. 
+sRGB "standard RGB" is a color space that was standardized to unify different monitors and printers.
 
 CIELAB is the color space that covers the average of human vision.
 
@@ -338,7 +323,7 @@ notes:
 
 why is color important? to see why...
 
-lets play a game -- which image has a red dot?  yell out left or right
+lets play a game -- which image has a red dot? yell out left or right
 
 we'll see a series of images
 
@@ -396,7 +381,7 @@ Which image has the red dot?
 
 [https://www.csc2.ncsu.edu/faculty/healey/PP/#jscript_search](https://www.csc2.ncsu.edu/faculty/healey/PP/#jscript_search)
 
-Color makes use of our "preattentive" visual cortex processing power -- we are able to detect color *before* our attention focuses.
+Color makes use of our "preattentive" visual cortex processing power -- we are able to detect color _before_ our attention focuses.
 
 notes:
 which was the easiest one to do of these 3 images?
@@ -408,7 +393,6 @@ we can make thinks more/less complex with this game (that is part of your option
 ## Color maps as Visual Encoding
 
 Color maps encode a data attribute as a color.
-
 
 ---
 
@@ -475,7 +459,7 @@ Brewer, 1999
 notes:
 different kinds of color palettes can be used to describe different types of data
 
-Here is a nice way of mapping out our options.  For example, binary (T/F or Y/N) is pretty easy to encode with 2 colors or luminance.
+Here is a nice way of mapping out our options. For example, binary (T/F or Y/N) is pretty easy to encode with 2 colors or luminance.
 
 If we have 3 categories, we can choose different hues for qualatative data.
 
@@ -505,7 +489,6 @@ When we start combining them though, it can get a little more confusing -- for e
 
 ---
 
-
 ## Diverging Colormaps
 
 ![spectral discrete colormap](images/spectral_discrete.png)
@@ -520,15 +503,13 @@ When we start combining them though, it can get a little more confusing -- for e
 
 ![continuous set1 of colors](images/set1_continuous.png)
 
-(See?  Works better as discrete!)
-
+(See? Works better as discrete!)
 
 ---
 
 ## It's full of colors
 
 https://commons.wikimedia.org/wiki/File:16777216colors.png
-
 
 ---
 
@@ -560,16 +541,13 @@ We map from a range of values to (0, 1):
 
 $ v' = (v - v_0)/(v_1 - v_0) $
 
-
 ---
 
 ## Colormaps: `gray`
 
 <!-- .slide: data-background-image="images/gray_colors.png" data-background-size="auto 75%" -->
 
-
 ---
-
 
 ## Colormaps: `gray`
 
@@ -581,9 +559,7 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 
 <!-- .slide: data-background-image="images/gist_stern_colors.png" data-background-size="auto 75%" -->
 
-
 ---
-
 
 ## Colormaps: `gist_stern`
 
@@ -595,9 +571,7 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 
 <!-- .slide: data-background-image="images/jet_colors.png" data-background-size="auto 75%" -->
 
-
 ---
-
 
 ## Colormaps: `jet`
 
@@ -609,9 +583,7 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 
 <!-- .slide: data-background-image="images/magma_colors.png" data-background-size="auto 75%" -->
 
-
 ---
-
 
 ## Colormaps: `magma`
 
@@ -623,14 +595,11 @@ $ v' = (v - v_0)/(v_1 - v_0) $
 
 <!-- .slide: data-background-image="images/viridis_colors.png" data-background-size="auto 75%" -->
 
-
 ---
-
 
 ## Colormaps: `viridis`
 
 <!-- .slide: data-background-image="images/viridis_3d.png" data-background-size="auto 75%" -->
-
 
 ---
 
@@ -669,7 +638,6 @@ http://enchroma.com/test/instructions/
 
 ---
 
-
 ## Color Blindness - But wait!
 
 http://enchroma.com/test/instructions/
@@ -677,12 +645,13 @@ http://enchroma.com/test/instructions/
 There's more: https://nakeddata.org/2021/01/22/accessible-data-visualisation-beyond-colour-blindness/
 
 Frank Elavksy (Staff Data Visualization Engineer + Designer on the Data Visualization team at Visa Inc.):
- * High contrast text
- * High contrast elements
- * Using texture, shape, units
- * Designing with zoom/magnification
- * Using Hierarchy and Focus
- * Using annotations or guides
+
+- High contrast text
+- High contrast elements
+- Using texture, shape, units
+- Designing with zoom/magnification
+- Using Hierarchy and Focus
+- Using annotations or guides
 
 notes: the focus on colorblindness in data visualization is at the expense of much more prevalent considerations like designing for low-vision folks
 
@@ -704,7 +673,7 @@ Check out [sc2.ncsu.edu/faculty/healey/PP](sc2.ncsu.edu/faculty/healey/PP) for m
 
 ## Other methods of visual encoding
 
-Motion is another channel, but is *very* attention-grabbing.
+Motion is another channel, but is _very_ attention-grabbing.
 
 <table><tr>
 <td><img src="https://www.csc2.ncsu.edu/faculty/healey/PP/figs/tg_flick.gif"/></br>Flicker</td>
@@ -721,7 +690,7 @@ Check out [https://www.csc2.ncsu.edu/faculty/healey/PP/](https://www.csc2.ncsu.e
 <!-- .slide: data-background-image="images/vad_slides_p51.png" data-background-size="auto 75%" -->
 
 notes:
-color hue, luminance and saturation make use of different "perception channels" listed here 
+color hue, luminance and saturation make use of different "perception channels" listed here
 
 there are others that we intuatively use, like position, length, tilt, area, ect
 
@@ -746,9 +715,9 @@ Length is the most linear -- which is why bar charts are so effective for transf
 
 Colormaps in Python - with the Michigan data and the scan data, we'll evaluate:
 
- * How to choose a colormap
- * What are some good "bounds" for that colormap
- * How do we set our color normalizations and transformations?
+- How to choose a colormap
+- What are some good "bounds" for that colormap
+- How do we set our color normalizations and transformations?
 
 ---
 
@@ -781,7 +750,7 @@ Matplotlib has three primary methods of specifying coordinates, each of which is
 - **axes** coordinates
 - **figure** coordinates
 
-These are not exhaustive!  Other transformations exist, such as for the display units, specifying things in inches, and also sub-figure systems.
+These are not exhaustive! Other transformations exist, such as for the display units, specifying things in inches, and also sub-figure systems.
 
 ---
 

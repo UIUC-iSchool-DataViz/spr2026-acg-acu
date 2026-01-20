@@ -3,6 +3,11 @@ layout: week
 visible: true
 icon: undraw_cohort_analysis_stny.svg
 notitle: true
+tags:
+  - scaling
+  - colors
+  - colormaps
+  - transformations
 examples:
   - filename: lecture05_examples.ipynb
     type: ipynb

@@ -8,6 +8,7 @@ tags:
   - maps
 description: >-
   We start out learning about the basics of geospatial visualization, including applying this in bqplot and cartopy.
+date: 2026-03-03
 ---
 
 # Beginning Geographic Visualization
@@ -16,7 +17,7 @@ description: >-
 
 ## Buildings and Dates
 
-Let's revisit our building dataset.  When we first load the data:
+Let's revisit our building dataset. When we first load the data:
 
 ```python
 df = pd.read_csv("building_inventory.csv", na_values={
@@ -47,9 +48,9 @@ We can convert our dataframe columns using casting and assignment:
 df["Year Acquired"] = ...
 ```
 
-Note that if default parsing worked, we could supply a `parse_dates` argument.  But ours requires some modification.
+Note that if default parsing worked, we could supply a `parse_dates` argument. But ours requires some modification.
 
-We can use `pd.to_datetime` to convert our dates.  What happens if we use it without any arguments?  Why?
+We can use `pd.to_datetime` to convert our dates. What happens if we use it without any arguments? Why?
 
 It accepts a `format` argument, which for us will be `"%Y"`.
 
@@ -89,11 +90,11 @@ Typically, one or more of these will be preserved, or at least, the distortion w
 - Shape (Conformal)
 - Distance
 
-There are other properties that can be preserved, as well.  Typically, maps will be a "compromise" between preserving different properties.
+There are other properties that can be preserved, as well. Typically, maps will be a "compromise" between preserving different properties.
 
 What happens when we preserve one property over another?
 
-Mercator is a "conformal" projection.  What is wrong with this?
+Mercator is a "conformal" projection. What is wrong with this?
 
 ---
 
@@ -105,12 +106,11 @@ Mercator is a "conformal" projection.  What is wrong with this?
 
 What happens when we make a map that minimizes one region and maximizes another?
 
-
 ---
 
 ## Projections: Distortions
 
-We can characterize distortions in a projection by examining how a known shape appears on them.  The Tissot Ellipse of Distortion is a method of showing this by drawing circles of a fixed radius and examining their elliptical distortion.
+We can characterize distortions in a projection by examining how a known shape appears on them. The Tissot Ellipse of Distortion is a method of showing this by drawing circles of a fixed radius and examining their elliptical distortion.
 
 What do you notice?
 
@@ -162,7 +162,6 @@ What do you notice?
 
 <!-- .slide: data-background-image="images/gnomonic_tissot.png" data-background-size="auto 95%" -->
 
-
 ---
 
 ## Maps: Coordinate Systems
@@ -181,7 +180,6 @@ Take care with:
 - North/South, East/West
 - Ranges
 
-
 ---
 
 ## Map Viz
@@ -198,13 +196,13 @@ Take care with:
 
 ## bqplot review
 
-Construct `Figure` objects from `Mark` objects.  Relate points to each other with `Scale` objects, display them using `Mark` objects that are keyed to a set of `Scale` objects, and apply interaction using `ipywidgets` and `traitlets`.
+Construct `Figure` objects from `Mark` objects. Relate points to each other with `Scale` objects, display them using `Mark` objects that are keyed to a set of `Scale` objects, and apply interaction using `ipywidgets` and `traitlets`.
 
 ---
 
 ## bqplot objects
 
-- A mark is some mechanism for displaying data.  For example, we might have data that has a set of x and y values, which we can use `Lines` to represent.
+- A mark is some mechanism for displaying data. For example, we might have data that has a set of x and y values, which we can use `Lines` to represent.
 - `Scale` objects describe relationships between visual attributes (position) and data values.
 - `Axis` objects are where data are placed.
 - `Figure` objects contain marks and axes, as well as interaction.
@@ -230,19 +228,18 @@ ax_y = bqplot.Axis(scale = y_sc, label = 'Y value', orientation = 'vertical')
 fig = bqplot.Figure(marks = [lines], axes = [ax_x, ax_y])
 display(fig)
 ```
-
 
 ---
 
 ## bqplot review
 
-Construct `Figure` objects from `Mark` objects.  Relate points to each other with `Scale` objects, display them using `Mark` objects that are keyed to a set of `Scale` objects, and apply interaction using `ipywidgets` and `traitlets`.
+Construct `Figure` objects from `Mark` objects. Relate points to each other with `Scale` objects, display them using `Mark` objects that are keyed to a set of `Scale` objects, and apply interaction using `ipywidgets` and `traitlets`.
 
 ---
 
 ## bqplot objects
 
-- A mark is some mechanism for displaying data.  For example, we might have data that has a set of x and y values, which we can use `Lines` to represent.
+- A mark is some mechanism for displaying data. For example, we might have data that has a set of x and y values, which we can use `Lines` to represent.
 - `Scale` objects describe relationships between visual attributes (position) and data values.
 - `Axis` objects are where data are placed.
 - `Figure` objects contain marks and axes, as well as interaction.
@@ -268,19 +265,18 @@ ax_y = bqplot.Axis(scale = y_sc, label = 'Y value', orientation = 'vertical')
 fig = bqplot.Figure(marks = [lines], axes = [ax_x, ax_y])
 display(fig)
 ```
-
 
 ---
 
 ## bqplot review
 
-Construct `Figure` objects from `Mark` objects.  Relate points to each other with `Scale` objects, display them using `Mark` objects that are keyed to a set of `Scale` objects, and apply interaction using `ipywidgets` and `traitlets`.
+Construct `Figure` objects from `Mark` objects. Relate points to each other with `Scale` objects, display them using `Mark` objects that are keyed to a set of `Scale` objects, and apply interaction using `ipywidgets` and `traitlets`.
 
 ---
 
 ## bqplot objects
 
-- A mark is some mechanism for displaying data.  For example, we might have data that has a set of x and y values, which we can use `Lines` to represent.
+- A mark is some mechanism for displaying data. For example, we might have data that has a set of x and y values, which we can use `Lines` to represent.
 - `Scale` objects describe relationships between visual attributes (position) and data values.
 - `Axis` objects are where data are placed.
 - `Figure` objects contain marks and axes, as well as interaction.
@@ -306,7 +302,6 @@ ax_y = bqplot.Axis(scale = y_sc, label = 'Y value', orientation = 'vertical')
 fig = bqplot.Figure(marks = [lines], axes = [ax_x, ax_y])
 display(fig)
 ```
-
 
 ---
 
@@ -314,15 +309,14 @@ display(fig)
 
 bqplot provides the `Map` mark.
 
-The `scales` property for the `Map` mark should have entries for both `projection` and `color`.  `projection` will be one of the geographic projections (more on that next time) such as `AlbersUSA`.
+The `scales` property for the `Map` mark should have entries for both `projection` and `color`. `projection` will be one of the geographic projections (more on that next time) such as `AlbersUSA`.
 
-The `Map` mark must also have `map_data` defined, which is a TopoJSON file.  For our purposes, we will use the built-in `bqplot` function `topo_load`, which can accept one of:
+The `Map` mark must also have `map_data` defined, which is a TopoJSON file. For our purposes, we will use the built-in `bqplot` function `topo_load`, which can accept one of:
 
 - `map_data/USCountiesMap.json` for US county-level data keyed by FIPS
 - `map_data/USStatesMap.json` for US state-level data
 - `map_data/EuropeMap.json` for European countries
 - `map_data/WorldMap.json` for the full Earth
-
 
 ---
 
@@ -361,9 +355,9 @@ What does this do?
 
 Transforming from a spherical reference system to a flat reference system is the job of the projection; transforming from one discretization of a sphere to another is the job of the coordinate system.
 
-We can utilize Coordinate Reference Systems to describe the *input* coordinate system and the *rasterization* system are described.
+We can utilize Coordinate Reference Systems to describe the _input_ coordinate system and the _rasterization_ system are described.
 
-For example, there are several different ways to draw "straight" lines.  We can do both `PlateCarree` and `Geodetic`.
+For example, there are several different ways to draw "straight" lines. We can do both `PlateCarree` and `Geodetic`.
 
 ```python
 c_lat, c_lon = 40.1164, -88.2434
@@ -384,7 +378,6 @@ ax.plot([c_lon, a_lon], [c_lat, a_lat], transform = cartopy.crs.Geodetic())
 ---
 
 <!-- .slide: data-background-image="images/map_plot2.png" data-background-size="auto 95%" -->
-
 
 ---
 

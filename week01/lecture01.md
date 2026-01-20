@@ -8,7 +8,7 @@ description: >-
   The syllabus for the course, along with discussions about "what"
   visualizations are, why we make them, and how to orient yourself in the
   course.
-date: 2026-01-12
+date: 2026-01-20
 ---
 
 ## Land Acknowledgment
@@ -98,13 +98,13 @@ However, PrairieLearn has a working installation you may also choose to use.
 ## Syllabus
 
 - Week 1 (Today) - Introduction
-- Week 2 - MLK Day Holiday
-- Week 3 - Data Storage and Operations
-- Week 4 - Types of Viz and Choosing Colors
+- Week 2 - Data Storage and Operations
+- Week 3 - Types of Viz
+- Week 4 - Choosing Colors
 - Week 5 - Beginning interactivity
 - Week 6 - Continuing interactivity with bqplot
 - Week 7 - More with dashboards & Map Viz (**this class might be "flipped"**)
-- Week 8 - Maps, maps and more maps
+- Week 8 - Maps, maps and more maps; Streamlit and Intro to Vega-lite/Altair
 
 notes:
 This is a rough syllabus! These are many of the topics we will cover, but
@@ -122,7 +122,6 @@ We might start getting into javascript earlier, depending on how we are doing.
 
 ## Syllabus, cont
 
-- Week 8 - Streamlit and Intro to Vega-lite/Altair
 - Week 9 - Spring break, no class!
 - Week 10 - Viz Audience; More Streamlit, Vega-lite (possible JavaScript)
 - Week 11 - Streamlit Apps in HuggingFace

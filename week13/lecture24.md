@@ -7,6 +7,7 @@ tags:
   - d3
 description: >-
   We went over how to test out Svelte on PrairieLearn
+date: 2026-04-16
 ---
 
 ---
@@ -35,7 +36,7 @@ npm install tailwindcss @tailwindcss/vite
 
 # Initializing our Skeleton Template
 
-Now, we have to add the `tailwindcss` to our `vite` plugin.  (What's `vite`, you say?!)  This goes in `vite.config.js`.
+Now, we have to add the `tailwindcss` to our `vite` plugin. (What's `vite`, you say?!) This goes in `vite.config.js`.
 
 ```typescript
 import { defineConfig } from "vite";
@@ -47,8 +48,8 @@ export default defineConfig({
     tailwindcss(),
     svelte(), // <-- Must come after Tailwind
   ],
-  server: {allowedHosts: ['us.prairielearn.com']},
-  base: './',
+  server: { allowedHosts: ["us.prairielearn.com"] },
+  base: "./",
 });
 ```
 
@@ -59,11 +60,11 @@ export default defineConfig({
 Now, we modify the file `src/app.css` to include the stylesheets:
 
 ```css
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import '@skeletonlabs/skeleton';
-@import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/cerberus';
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton/optional/presets";
+@import "@skeletonlabs/skeleton/themes/cerberus";
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 ```
@@ -89,13 +90,13 @@ Recall a few things about Svelte:
 We bind variables either by utilizing `bind:` to prefix an attribute:
 
 ```html
-<input bind:value={someVariable}/>
+<input bind:value="{someVariable}" />
 ```
 
 Or, if the variable name matches the attribute (i.e., `value`), we can just write `{value}`:
 
 ```html
-<input {value}/>
+<input {value} />
 ```
 
 If we don't bind, this is unidirectional.
@@ -104,7 +105,7 @@ If we don't bind, this is unidirectional.
 
 # Reactive Sections
 
-We can write sections of code that will execute whenever a "dependency" variable in them changes inside a `$` section.  For instance, imagine we wanted to recalculate a `height` variable based on a `width` variable.
+We can write sections of code that will execute whenever a "dependency" variable in them changes inside a `$` section. For instance, imagine we wanted to recalculate a `height` variable based on a `width` variable.
 Inside our `<script lang="ts">` section, we would write:
 
 ```

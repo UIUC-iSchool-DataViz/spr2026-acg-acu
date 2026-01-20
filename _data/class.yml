@@ -6,27 +6,22 @@ instructors:
     office_hours: By appointment
 tas:
   -
-    name: Yilin Xia
-    email: yilinx2@illinois.edu
+    name: Hunter DeMeyer
+    email: demeyer3@illinois.edu
     office: 614 E. Daniel Street, Room 5080
     office_hours: By appointment
-  -
-    name: Jingyuan Chen
-    email: jc190@illinois.edu
-    office: 614 E. Daniel Street, Room 5080
-    office_hours: MW 1:00-2:30 PM, else by appointment
 course:
   name: Data Visualization
   number: IS445
   semester: Spring 2026
   section: ACG-ACU
-  location: Turner Hall, room W109
-  time: Mondays, 9:00AM-11:50AM
+  location: iSchool, 501 E Daniel St, Room 126
+  time: Tuesdays and Thursdays, 3:30-4:50PM
   credit_hours: 4
 urls:
   -
     name: Canvas
-    url: https://canvas.illinois.edu/courses/TODO_NEW_ID
+    url: https://canvas.illinois.edu/courses/64831
   -
     name: Course Materials
     url: https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/

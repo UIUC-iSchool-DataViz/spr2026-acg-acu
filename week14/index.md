@@ -3,6 +3,11 @@ layout: week
 visible: true
 icon: undraw_researching_22gp.svg
 notitle: true
+tags:
+  - python
+  - workflows
+  - voila
+  - dashboards
 examples: []
 ---
 
