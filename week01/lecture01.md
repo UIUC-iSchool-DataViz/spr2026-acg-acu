@@ -53,7 +53,7 @@ notes:
 
 A few notes about this semester -- while assignments will be posted on Canvas, the actual completion of the assignments will take place on the PrairieLearn platform. We will discuss this in more detail when we get to looking at homework stuff, but in short these will be "online" cloud notebooks that have all the packages you need already installed so you don't have to install (too many) things on your local machine
 
-Also, we will be utilizing CampusWire for discussing homeworks. Again, more on this when we get to looking at the homework (as part of your homework is to say hi on slack!)
+Also, we will be utilizing CampusWire for discussing homeworks. Again, more on this when we get to looking at the homework (as part of your homework is to say hi on CampusWire!)
 
 ---
 
@@ -91,7 +91,7 @@ If you want to use your own Python setup, I recommend:
 1. Ensure that Jupyterlab is installed and working
 1. Ensure that you have matplotlib, pandas and numpy installed and working.
 
-However, PrairieLearn has a working installation you may also choose to use.
+However, we encourage you to use PrairieLearn for in-class work.
 
 ---
 

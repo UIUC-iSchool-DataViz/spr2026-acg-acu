@@ -15,7 +15,7 @@ description: >-
 
 # Final Project
 
-Your final project, to be completed in (assigned) groups, is to build a semi-realtime "observatory" of data.  You can find a few different possibilities for the data, but I want to encourage you to think of data related to things like:
+Your final project, to be completed in (assigned) groups, is to build a semi-realtime "observatory" of data. You can find a few different possibilities for the data, but I want to encourage you to think of data related to things like:
 
 - Earthquakes
 - Space weather, rocks and satellites
@@ -27,7 +27,7 @@ Your final project, to be completed in (assigned) groups, is to build a semi-rea
 
 # Final Project: Phases
 
-Your final project will have three phases, each of which will have a component for you to turn in.  The second and third components will be turned in as a group, but the first component will be individually graded.
+Your final project will have three phases, each of which will have a component for you to turn in. The second and third components will be turned in as a group, but the first component will be individually graded.
 
 **Before beginning, clear your dataset with me and Esther.**
 
@@ -37,51 +37,49 @@ Some places to look for dataset ideas:
 - [Public APIs](https://github.com/public-apis/public-apis)
 - [Awesome JSON](https://github.com/jdorfman/awesome-json-datasets)
 
-
 ---
 
 # Final Project: Part One
 
-The first part of your project will be to *explore* the data; this is worth **30 points out of 100**.  You are to turn in a notebook -- whether in Observable, Python, Iodide, or a *combination* of them, that includes every single cell and step you took in exploring the data.  This is an example of the "visualization for self" process.  This means you might take shortcuts, you might make mistakes, and you might make really, really awful visualizations.
+The first part of your project will be to _explore_ the data; this is worth **30 points out of 100**. You are to turn in a notebook -- whether in Starboard, Python, or a _combination_ of them, that includes every single cell and step you took in exploring the data. This is an example of the "visualization for self" process. This means you might take shortcuts, you might make mistakes, and you might make really, really awful visualizations.
 
 Showing that you explored the data individually (even if you did it while talking to a collaborator or classmate) is enough to satisfy this portion of the project.
 
-Download the data.  Dig in to it.  Look at it.  Find interesting things. Experiment.  Make plots, make summary statistics, and make it familiar to yourself.
+Download the data. Dig in to it. Look at it. Find interesting things. Experiment. Make plots, make summary statistics, and make it familiar to yourself.
 
 ---
 
 # Final Project: Part Two
 
-The second component of your project will be to design your "observatory." Note that this is *pseudo* realtime.  It does not need to *automatically* update its data; a refresh button, or requiring a page reload, is sufficient.  This is worth **40 points out of 100**.
+The second component of your project will be to design your "observatory." Note that this is _pseudo_ realtime. It does not need to _automatically_ update its data; a refresh button, or requiring a page reload, is sufficient. This is worth **40 points out of 100**.
 
-This could consist of drawings, prototypes of web pages or notebooks, and the code necessary to build the different components.  This component is *scaffolding*, not the final product.  It should be thought of as the "viz for peers" stage of the process.  You can submit drawings (including photos of drawings), jamboards, notebooks (which you *are* allowed to clean up), and stages of prototypes.
+This could consist of drawings, prototypes of web pages or notebooks, and the code necessary to build the different components. This component is _scaffolding_, not the final product. It should be thought of as the "viz for peers" stage of the process. You can submit drawings (including photos of drawings), jamboards, notebooks (which you _are_ allowed to clean up), and stages of prototypes.
 
 You should walk me through the process of how you built your observatory, and it does not need to be a linear, successes-only process.
 
-This will include your in-class presentation of the work. You will also have five minutes, as a *group*, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process.  These presentations will be the 8th of December, the final class date.
-
+This will include your in-class presentation of the work. You will also have five minutes, as a _group_, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process. These presentations will be the 8th of December, the final class date.
 
 ---
 
 # Final Project: Part Three
 
-The final component of your project will be a deployment of your work online.  This will be worth **30 points out of 100**.
+The final component of your project will be a deployment of your work online. This will be worth **30 points out of 100**.
 
-This should be deployed on HuggingFace, which we will demonstrate later today.  They should be fully-executable and need to include a mechanism for "checking for new data."
+This should be deployed on HuggingFace, which we will demonstrate later today. They should be fully-executable and need to include a mechanism for "checking for new data."
 
 ---
 
 # Final Project Summary
 
-| Points | Description | Requires Code |
-|-|-|-|
-| 30 | Your own exploration of a dataset. | Yes |
-| 40 | You and your group designing, then presenting your design, to class. | No |
-| 30 | A final deployment of your project on HuggingFace. | Yes |
+| Points | Description                                                          | Requires Code |
+| ------ | -------------------------------------------------------------------- | ------------- |
+| 30     | Your own exploration of a dataset.                                   | Yes           |
+| 40     | You and your group designing, then presenting your design, to class. | No            |
+| 30     | A final deployment of your project on HuggingFace.                   | Yes           |
 
-* You will use *your own datasets* for part 1.  This is **on your own**.
-* Your group will choose from those datasets for parts 2 and 3.
-* Part 3 will be a deployment on HuggingFace.
+- You will use _your own datasets_ for part 1. This is **on your own**.
+- Your group will choose from those datasets for parts 2 and 3.
+- Part 3 will be a deployment on HuggingFace.
 
 ---
 
@@ -97,13 +95,11 @@ This should be deployed on HuggingFace, which we will demonstrate later today.  
 
 We can think of this as telling a story to yourself.
 
-You can take shortcuts -- you can skip labels, colors, and so on, *sort of*.  You just have to make sure you're not lying to yourself.
+You can take shortcuts -- you can skip labels, colors, and so on, _sort of_. You just have to make sure you're not lying to yourself.
 
 ![Why would we lie to ourselves?](images/why_lie.gif)
 
-
 ---
-
 
 ## Viz for Self
 
@@ -111,7 +107,7 @@ How do we explore data?
 
 - What characteristic of data influence how you visualize it?
 - What information do you have that would be visually interesting?
-- What information do you *not* have that you need in order to understand the importance of the data?
+- What information do you _not_ have that you need in order to understand the importance of the data?
 
 <div class="r-stack">
 <p class="fragment fade-in-then-out">Example: A banking database where each record is a bank transaction and the fields include date, deposit or withdrawal amount, customer id, and the interest rate of the account.</p>
@@ -119,9 +115,7 @@ How do we explore data?
 <p class="fragment fade-in-then-out">Example: A computational simulation of a galaxy where each record is a timestep in the evolution of the 3D grid, and the fields include time, X position, Y position, Z position, gas density, gas temperature, gas metallicity, and number of stars.</p>
 </div>
 
-
 ---
-
 
 ## Viz for Self
 
@@ -130,8 +124,7 @@ What do you want to get out of visualization for yourself?
 - Do you want to find meaning?
 - Do you want to understand how to guide further visualizations?
 - Is the story you want to tell already known to you?
-- What __shortcuts__ can you take?
-
+- What **shortcuts** can you take?
 
 ---
 
@@ -143,9 +136,7 @@ To design a visualization for experts, you need to analyze how they process info
 - What conventions will they assume?
 - Are they able to fill in the blanks of information?
 
-
 ---
-
 
 ## Viz for Experts
 
@@ -156,9 +147,7 @@ allow="encrypted-media" allowfullscreen></iframe>
 notes:
 This is from Chris Havlin, and it's vorticity of a tornado
 
-
 ---
-
 
 ## Viz for Experts
 
@@ -169,9 +158,7 @@ Here's a series of visualizations made by or for domain experts that I just had 
 
 What are some things you notice they have in common?
 
-
 ---
-
 
 ## Viz for Experts
 
@@ -182,9 +169,7 @@ Here's a series of visualizations made by or for domain experts that I just had 
 
 What are some things you notice they have in common?
 
-
 ---
-
 
 ## Viz for Experts
 
@@ -195,9 +180,7 @@ Here's a series of visualizations made by or for domain experts that I just had 
 
 What are some things you notice they have in common?
 
-
 ---
-
 
 ## Viz for Experts
 
@@ -213,9 +196,7 @@ How can they do that?
 notes:
 ask students - other ideas? what about interactivity? (Interactivity needs to be decent)
 
-
 ---
-
 
 ## Viz for Experts
 
@@ -229,7 +210,6 @@ How can we make visualizations more analytical?
 
 notes:
 ask students - other ideas? What about animated data?
-
 
 ---
 
@@ -269,7 +249,6 @@ Commonly, data will be represented in "scientific visualization" through one of 
 </div>
 </div>
 
-
 ---
 
 ## Discrete Points: Data
@@ -288,7 +267,7 @@ Commonly, data will be represented in "scientific visualization" through one of 
   - Integrated over neighbors
 
 </div>
-</div> 
+</div>
 
 ---
 
@@ -319,8 +298,7 @@ Commonly, data will be represented in "scientific visualization" through one of 
   - Integrated over neighbors
 
 </div>
-</div> 
-
+</div>
 
 ---
 
@@ -359,25 +337,23 @@ Is this the same as incremental updates to a dataset?
 
 (What about the median?)
 
-
 ---
 
 ## A Little Bit of D3
 
 We're going to learn a very small bit of [d3.js](https://d3js.org/).
 
-We will utilize D3 on [starboard.gg](https://starboard.gg).  We do this by including it from a CDN, as we did for vega last time:
+We will utilize D3 on [starboard.gg](https://starboard.gg). We do this by including it from a CDN, as we did for vega last time:
 
 <code>
 &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
 </code>
 
-
 ---
 
 ## Concepts in d3: outline
 
-The basic concepts here we will convey, focusing on *static* visualizations:
+The basic concepts here we will convey, focusing on _static_ visualizations:
 
 - `.select()` and `.selectAll()`
 - `.enter()`
@@ -403,7 +379,7 @@ Our typical workflow:
 
 ## Concepts in d3: accessors and setters
 
-We will very frequently run into the case where we call something, and supply a *function* to it, rather than supplying a value.  For instance, *both* of these calls to `attr` are valid in a typical d3 workflow:
+We will very frequently run into the case where we call something, and supply a _function_ to it, rather than supplying a value. For instance, _both_ of these calls to `attr` are valid in a typical d3 workflow:
 
 ```javascript
 .attr("cx", 1.0)
@@ -419,7 +395,7 @@ In one, we are setting the value static; in the other, we base the value on the 
 
 ## Concepts in d3: Let's make circles
 
-For our first exploration, let's just make some circles.  I will demonstrate this in observable, but here is the key snippet of code:
+For our first exploration, let's just make some circles. I will demonstrate this in Starboard, but here is the key snippet of code:
 
 ```
 var dataset = [ {'x': 100, 'y': 200, 'radius': 15},
@@ -458,7 +434,7 @@ To map from a given range to a different range in a linear fashion, we can const
 var xScale = d3.scaleLinear().range([0, 100]).domain([0.0, 1.0]);
 ```
 
-This is now an object we can use to map the values 0 .. 1 to 0 .. 100.  This is useful for, among other things, computing the position of a given value:
+This is now an object we can use to map the values 0 .. 1 to 0 .. 100. This is useful for, among other things, computing the position of a given value:
 
 ```javascript
 .attr("cx", d => xScale(d.x))
@@ -468,10 +444,9 @@ This is now an object we can use to map the values 0 .. 1 to 0 .. 100.  This is 
 
 ## Additional Basic Topics
 
-`d3.axisBottom(xScale)` can be used to create ticks and axes; however, it requires manual translation using the `transform` attribute, using something like `.attr("transform", "translate(0, 30)")`.  This then brings up our concept of margins, width, height, and the like!  How can we manage these?
+`d3.axisBottom(xScale)` can be used to create ticks and axes; however, it requires manual translation using the `transform` attribute, using something like `.attr("transform", "translate(0, 30)")`. This then brings up our concept of margins, width, height, and the like! How can we manage these?
 
 Let's try it out!
-
 
 ---
 
@@ -480,7 +455,8 @@ Let's try it out!
 We can create one programmatically:
 
 ```javascript
-const svg = d3.create("svg")
+const svg = d3
+  .create("svg")
   .attr("id", "my_svg")
   .attr("width", 300)
   .attr("height", 300);
@@ -492,10 +468,10 @@ or, in starboard, we can create one through standard HTML:
 <svg id="my_svg">
 ```
 
-which we can then *select*:
+which we can then _select_:
 
 ```javascript
-const svg = d3.select("#my_svg")
+const svg = d3.select("#my_svg");
 ```
 
 ---
@@ -503,38 +479,35 @@ const svg = d3.select("#my_svg")
 # Selecting and binding data
 
 ```javascript
-
 var dataset = [
-  {x1: 1.0, y1: 3.0, x2: 3.5, y2: 2.0, radius: 10},
-  {x1: 2.5, y1: 2.0, x2: 0.75, y2: 3.5, radius: 5},
-  {x1: 3.1, y1: 0.6, x2: 4.1, y2: 3.4, radius: 25}
+  { x1: 1.0, y1: 3.0, x2: 3.5, y2: 2.0, radius: 10 },
+  { x1: 2.5, y1: 2.0, x2: 0.75, y2: 3.5, radius: 5 },
+  { x1: 3.1, y1: 0.6, x2: 4.1, y2: 3.4, radius: 25 },
 ];
 
-svg.selectAll("circle")
-   .data(dataset)
-   .enter()
-   .attr("cx", d => xScale(d.x1))
-   .attr("cy", d => yScale(d.y1))
-   .attr("r", d => d.radius)
-   .style("fill", "black");
+svg
+  .selectAll("circle")
+  .data(dataset)
+  .enter()
+  .attr("cx", (d) => xScale(d.x1))
+  .attr("cy", (d) => yScale(d.y1))
+  .attr("r", (d) => d.radius)
+  .style("fill", "black");
 ```
-
 
 ---
 
 ## Events
 
-There are many events that we can "listen" for, and respond to.  For instance, the `click` event is a common event to manage.
+There are many events that we can "listen" for, and respond to. For instance, the `click` event is a common event to manage.
 
 The function receives the data (if any), the index of the node, and the nodelist.
 
 ```javascript
-d3.selectAll("circle")
-  .on("click", (d, i, n) => {
-    d3.select(n[i]).attr("r", 100)
-  });
+d3.selectAll("circle").on("click", (d, i, n) => {
+  d3.select(n[i]).attr("r", 100);
+});
 ```
-
 
 ---
 
@@ -547,11 +520,10 @@ d3.selectAll("circle")
   .data(dataset)
   .transition()
   .duration(2000)
-  .attr("x", d => d.x + 2)
+  .attr("x", (d) => d.x + 2);
 ```
 
-Updating attributes utilizes "tween"-ing functions for interpolation.  Many are built in, but you can choose to build your own.
-
+Updating attributes utilizes "tween"-ing functions for interpolation. Many are built in, but you can choose to build your own.
 
 ---
 
@@ -565,32 +537,29 @@ Anything that is in the DOM can be selected by, and modified by, D3.
 
 How might we modify this paragraph?
 
-
 ---
 
 ## Transformations
 
-SVG specifies a number of [possible transformations](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform).  These include rotation, translations, skews and scales.  We can set these through the `.attr` call, but note that this requires a bit of string manipulation.
+SVG specifies a number of [possible transformations](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform). These include rotation, translations, skews and scales. We can set these through the `.attr` call, but note that this requires a bit of string manipulation.
 
 ```javascript
-svg.selectAll("circle").attr("transform",
-    (d, i) => "skewY(" + i*5 + ")");
+svg.selectAll("circle").attr("transform", (d, i) => "skewY(" + i * 5 + ")");
 ```
 
-Note that we're concatenating an integer to a string here, which casts the int to a string.  This is a bit non-intuitive.
+Note that we're concatenating an integer to a string here, which casts the int to a string. This is a bit non-intuitive.
 
 We can use this to reshape our objects in many different ways -- especially using the index of the data point!
-
 
 ---
 
 ## Scales
 
-D3 provides a number of different [scaling types](https://github.com/d3/d3-scale).  We will be discussing, specifically, banded scales and color scales.
+D3 provides a number of different [scaling types](https://github.com/d3/d3-scale). We will be discussing, specifically, banded scales and color scales.
 
-One thing to note is that d3 also provides handy functions for computing properties of [arrays](https://github.com/d3/d3-array).  For instance:
+One thing to note is that d3 also provides handy functions for computing properties of [arrays](https://github.com/d3/d3-array). For instance:
 
-- `d3.min`, `d3.max`, `d3.minIndex` and `d3.maxIndex`, all of which accept both an iterable *and* an "accessor" function.
+- `d3.min`, `d3.max`, `d3.minIndex` and `d3.maxIndex`, all of which accept both an iterable _and_ an "accessor" function.
 - `d3.extent`, which provides the format required by a scale.
 - `d3.sum`, `d3.mean`, `d3.median`, `d3.quantil`, `d3.variance`
 
@@ -602,7 +571,7 @@ One thing to note is that d3 also provides handy functions for computing propert
 var xScale = d3.scaleLinear().range([0, 100]).domain([0.0, 1.0]);
 ```
 
-We can construct objects that map between a *domain* and a *range*.  Here, we are mapping the data values 0.0 .. 1.0 to the values 0 .. 100.  This has the effect of allowing us to take data values and scale them to, for instance, pixel values.
+We can construct objects that map between a _domain_ and a _range_. Here, we are mapping the data values 0.0 .. 1.0 to the values 0 .. 100. This has the effect of allowing us to take data values and scale them to, for instance, pixel values.
 
 ---
 
@@ -614,27 +583,26 @@ Banded scales provide discrete categorization of values, often used for categori
 var band = d3.scaleBand(["low", "medium", "high"], [0.0, 100.0]);
 ```
 
-This takes an array of input values for the domain.  Additional changes can be made to the bandwidth, padding, etc. The d3 wiki has a\
+This takes an array of input values for the domain. Additional changes can be made to the bandwidth, padding, etc. The d3 wiki has a\
 [diagram](https://raw.githubusercontent.com/d3/d3-scale/master/img/band.png) describing this.
 
 ---
 
 ## Color Scales
 
-We can use `d3.scaleSequential` to generate colormaps for continuous values.  These accept an interpolator function.  d3 provides interpolator functions for many common colormaps.  For instance:
+We can use `d3.scaleSequential` to generate colormaps for continuous values. These accept an interpolator function. d3 provides interpolator functions for many common colormaps. For instance:
 
 ```javascript
-var csc = d3.scaleSequential(d3.interpolateViridis).domain([1.0, 100.0])
+var csc = d3.scaleSequential(d3.interpolateViridis).domain([1.0, 100.0]);
 ```
 
 We can also use log versions of these, and quantized versions.
-
 
 ---
 
 ## Brushing
 
-Brushing in d3 requires some build-it-yourself effort, but building a brush object itself is straightforward.  You create a brush object with extents, and you call that on your object.  Here, `brushed` is a function to be called when the brush selection changes.
+Brushing in d3 requires some build-it-yourself effort, but building a brush object itself is straightforward. You create a brush object with extents, and you call that on your object. Here, `brushed` is a function to be called when the brush selection changes.
 
 ```
 
@@ -650,20 +618,18 @@ svg.append("g").attr("class", "brush").call(brush);
 
 What could we do with this?
 
-
 ---
 
 ## Paths
 
-d3 can also generate `path` objects.  Typically these are generated using curve generators.
+d3 can also generate `path` objects. Typically these are generated using curve generators.
 
 ```javascript
-var line = d3.line().curve(
-            d3.curveCatmullRom.alpha(0.5));
-var myPath = svg.append("path")
-              .attr("d", line(myPoints))
-              .attr("stroke", "black");
-
+var line = d3.line().curve(d3.curveCatmullRom.alpha(0.5));
+var myPath = svg
+  .append("path")
+  .attr("d", line(myPoints))
+  .attr("stroke", "black");
 ```
 
 Interpolation of paths can be tricky, but it is possible.

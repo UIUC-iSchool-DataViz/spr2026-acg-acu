@@ -396,13 +396,7 @@ We'll add buttons to update their hit points.
 
 We're going to learn a very small bit of [d3.js](https://d3js.org/).
 
-The easiest way to utilize D3 is through [observablehq.com](https://observablehq.com):
-
-```
-d3 = require("d3@7");
-```
-
-although it is straightforward to include the necessary code in an HTML page:
+The easiest way to utilize D3 is through [starboard.gg](https://starboard.gg), although it is straightforward to include the necessary code in an HTML page:
 
 <code>
 &lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
@@ -457,7 +451,7 @@ In one, we are setting the value static; in the other, we base the value on the 
 
 ## Concepts in d3: Let's make circles
 
-For our first exploration, let's just make some circles. I will demonstrate this in observable, but here is the key snippet of code:
+For our first exploration, let's just make some circles. I will demonstrate this in Starboard, but here is the key snippet of code:
 
 ```
 var dataset = [ {'x': 100, 'y': 200, 'radius': 15},

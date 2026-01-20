@@ -20,14 +20,16 @@ title: Prep Notes - Week 1
 # Week 01: Intro to Python, Making some plots
 
 ### Topics
- 1. Intro to Jupyter notebooks
- 1. Making quick plots
- 1. Read data from File
- 
+
+1.  Intro to Jupyter notebooks
+1.  Making quick plots
+1.  Read data from File
+
 ### Extras
- * Dot-plot/timeline
- * Diagrams
- * Starting to think about images
+
+- Dot-plot/timeline
+- Diagrams
+- Starting to think about images
 
 +++
 
@@ -35,17 +37,19 @@ title: Prep Notes - Week 1
 
 I can write things in here!
 
-# This is a header!  Wow!
+# This is a header! Wow!
 
 ## This is a smaller header... it is less exciting.
 
 I'm going to list some notes with bullet points:
- * this my first thing
- * this is my second thing
- 
+
+- this my first thing
+- this is my second thing
+
 I'm going to make numbered notes:
-  1. This will be number 1
-  1. This will be number 2
+
+1. This will be number 1
+1. This will be number 2
 
 +++
 
@@ -80,9 +84,10 @@ This was an `ESC-b` for below cell
 ## 2. Making quick plots
 
 ### Getting started with python
-* First, lets get started by making sure we are using matplotlib in "inline" mode
-* The "%" here means this is a "magic function" in iPython, where jupyter is sort of built on iPython, and iPython is the "interactive" form of python.  Here a "magic function" is sort of like a command line call, i.e. a call in python that does not rely on using python syntax
-* All that the "inline" is saying is please present the images generated with matplotlib in the actual notebook, don't try to save them somwhere else
+
+- First, lets get started by making sure we are using matplotlib in "inline" mode
+- The "%" here means this is a "magic function" in iPython, where jupyter is sort of built on iPython, and iPython is the "interactive" form of python. Here a "magic function" is sort of like a command line call, i.e. a call in python that does not rely on using python syntax
+- All that the "inline" is saying is please present the images generated with matplotlib in the actual notebook, don't try to save them somwhere else
 
 **UPDATE:** I think you no longer have to do this in newer versions of jupyter notebook:
 
@@ -91,10 +96,11 @@ This was an `ESC-b` for below cell
 ```
 
 ### Import matplotlib stuffs
-* ok, so now we are doing the actual importing of libraries
-* matplotlib is sort of a generic plotting library
-* matplotlib.pyplot is a list of plotting routines, and you'll often see it short-handed as plt
-* And here we are just setting the kind of font we want to use
+
+- ok, so now we are doing the actual importing of libraries
+- matplotlib is sort of a generic plotting library
+- matplotlib.pyplot is a list of plotting routines, and you'll often see it short-handed as plt
+- And here we are just setting the kind of font we want to use
 
 ```{code-cell} ipython3
 import matplotlib
@@ -107,34 +113,36 @@ import datetime
 ```
 
 ### Import numpy
-* now, lets import numpy, usually shorthanded as "np"
-* this is a set of tools that allows for array manipulation - remember that Python natively does things as lists, and numpy allows for mathematical operations with arrays, like multiplying and adding arrays for example
+
+- now, lets import numpy, usually shorthanded as "np"
+- this is a set of tools that allows for array manipulation - remember that Python natively does things as lists, and numpy allows for mathematical operations with arrays, like multiplying and adding arrays for example
 
 ```{code-cell} ipython3
 import numpy as np
 ```
 
 ### Getting on with it!
-* now, lets generate some data to make some plots with
-* lets check out that FRED data we were looking at before
 
-| Date | GDP in Billions of $ |
-| ---- | -- |
-| 2007-01-01 | 14233.2 |
-| 2007-04-01 | 14422.3 |
-| 2007-07-01 | 14569.7 |
-| 2007-10-01 | 14685.3 |
-| 2008-01-01 | 14668.4 |
-| 2008-04-01 | 14813.0 |
-| 2008-07-01 | 14843.0 |
-| 2008-10-01 | 14549.9 |
-| 2009-01-01 | 14383.9 |
+- now, lets generate some data to make some plots with
+- lets check out that FRED data we were looking at before
+
+| Date       | GDP in Billions of $ |
+| ---------- | -------------------- |
+| 2007-01-01 | 14233.2              |
+| 2007-04-01 | 14422.3              |
+| 2007-07-01 | 14569.7              |
+| 2007-10-01 | 14685.3              |
+| 2008-01-01 | 14668.4              |
+| 2008-04-01 | 14813.0              |
+| 2008-07-01 | 14843.0              |
+| 2008-10-01 | 14549.9              |
+| 2009-01-01 | 14383.9              |
 
 +++
 
 Let's put our time delimiter in units of YEAR MONTH DAY, which will naturally sort our data.
 
-*NOTE: for the online class, this can be copied and pasted into chat window, for in-person class, can be copied and pasted into the Slack*
+_NOTE: for the online class, this can be copied and pasted into chat window, for in-person class, can be copied and pasted into CampusWire_
 
 ```{code-cell} ipython3
 time = [20070101, 20070401, 20070701, 20071001, 20080101, 20080401, 20080701, 20081001, 20090101]
@@ -167,8 +175,9 @@ plt.ylabel('GDP in Billions')
 ```
 
 ### Using Datetime for dates
-* only issue with the above is that it is hard to figure out what dates are what
-* we can use the datetime package to format our axis all nice like
+
+- only issue with the above is that it is hard to figure out what dates are what
+- we can use the datetime package to format our axis all nice like
 
 ```{code-cell} ipython3
 from datetime import datetime
@@ -200,8 +209,9 @@ We get some dates now on the x-axis, and they are evenly spaced which makes sens
 +++
 
 ### Lets think of a different way to visualize this same dataset (we will probably skip this in class)
-* Suppose instead, we want to highlight regions of "low" and "high" GDP
-* so, first we have to define what low and high mean
+
+- Suppose instead, we want to highlight regions of "low" and "high" GDP
+- so, first we have to define what low and high mean
 
 +++
 
@@ -219,7 +229,7 @@ Let's just arbitarily choose a split between low and high GDP:
 gdp_high = 14600.0
 ```
 
-Now, lets grab the time min & max for when this occurs.  We can use array manipulations to do this by using boolean expressions.  For example we can create arrays of when things are true or false:
+Now, lets grab the time min & max for when this occurs. We can use array manipulations to do this by using boolean expressions. For example we can create arrays of when things are true or false:
 
 ```{code-cell} ipython3
 gdp >= gdp_high
@@ -268,13 +278,16 @@ We can do better... with a visualization!
 +++
 
 ## 3. Reading in data from a file
+
 Note, we can also do plots like the above by reading in data from a file
-* Let's read in the same GDP data
-* go to: https://fred.stlouisfed.org/series/GDP to download the data *or* you can download from the course page for week 01
-* if downloading directly from FRED: click on the "Download" and select CSV
+
+- Let's read in the same GDP data
+- go to: https://fred.stlouisfed.org/series/GDP to download the data _or_ you can download from the course page for week 01
+- if downloading directly from FRED: click on the "Download" and select CSV
 
 ### The Hard way (we will probably skip this in class or go over it quickly)
-There are several ways to read in CSV files that we will use throughout the course but right now.  We'll usually end up using the `Pandas` package (in the install list) to do this, but first, we'll do this the hard way by making ourselves a little converter like so:
+
+There are several ways to read in CSV files that we will use throughout the course but right now. We'll usually end up using the `Pandas` package (in the install list) to do this, but first, we'll do this the hard way by making ourselves a little converter like so:
 
 ```{code-cell} ipython3
 def converter(v):
@@ -282,9 +295,9 @@ def converter(v):
     return datetime.strptime(v.decode("ascii"), '%Y-%m-%d')
 ```
 
-Where is my file located?  One way to do this is open a terminal to look, or use a file browser.  But it is likely wherever downloads usually get stored on your local machine!
+Where is my file located? One way to do this is open a terminal to look, or use a file browser. But it is likely wherever downloads usually get stored on your local machine!
 
-**Note:** if you are on a windows, you will have a different filepath: Can someone with a windows machine post in the Slack chat what their filepath looks like so folks can see it?
+**Note:** if you are on a windows, you will have a different filepath: Can someone with a windows machine post in CampusWire what their filepath looks like so folks can see it?
 
 ```{code-cell} ipython3
 myFredFile = "/Users/jnaiman/Downloads/GDP.csv"
@@ -316,11 +329,11 @@ ax.plot_date(data["date"], data["gdp"], '-')
 plt.show()
 ```
 
-Let's make our plot a little fancier by specifying a certain "style" for our plot, in this case, we will have it look like a plot from fivethirtyeight.com.  Here will use a `with` statement to make sure that *only this plot* is in this style:
+Let's make our plot a little fancier by specifying a certain "style" for our plot, in this case, we will have it look like a plot from fivethirtyeight.com. Here will use a `with` statement to make sure that _only this plot_ is in this style:
 
 ```{code-cell} ipython3
 style = 'fivethirtyeight'
-with plt.style.context(style): 
+with plt.style.context(style):
     fig, ax = plt.subplots(figsize=(10, 8))
     ax.plot_date(data["date"], data["gdp"], '-')
     plt.show()
@@ -369,8 +382,9 @@ for v in data["gdp"][240:260]: print(v)
 ```
 
 ## EXTRA: Let's now visualize this on a timeline instead of a graph
-* we will highlight regions of low and high there
-* this will make use of a lot of the customization options available to you in `matplotlib`
+
+- we will highlight regions of low and high there
+- this will make use of a lot of the customization options available to you in `matplotlib`
 
 Let's start by making a timeline that shows all the measurements and also the range of low & high GDPs.
 
@@ -521,25 +535,26 @@ for t in time_lh:
     ax.plot(t, [1]*len(t), c='m', marker='', ls='-', lw=20, solid_joinstyle="bevel",
         solid_capstyle="projecting",zorder=0)
 
-# label x 
+# label x
 ###ax.set_xlabel('Date')  # maybe lets not
 
-plt.show() 
+plt.show()
 ```
 
 ## So there, are a few things to notice about the above plot.
-* first off, there is no point for the low GDP values because this is a single point -- i.e. there is only 1 date tagged as "low" GDP (2007-01-01)
-* Also, it really looks like the high region is extending outside the time stamps of 2007-07-01 & 2007-08-01, why?
+
+- first off, there is no point for the low GDP values because this is a single point -- i.e. there is only 1 date tagged as "low" GDP (2007-01-01)
+- Also, it really looks like the high region is extending outside the time stamps of 2007-07-01 & 2007-08-01, why?
 
 ### Lets play around with our plotting routine to find out!
 
-First, we are going to put everything we did above into a function so we don't have to mess with things one at a time again.  We will specify the "capstyle" of our plot as a parameter for reasons that will be come clearer shortly.
+First, we are going to put everything we did above into a function so we don't have to mess with things one at a time again. We will specify the "capstyle" of our plot as a parameter for reasons that will be come clearer shortly.
 
 ```{code-cell} ipython3
 # ***copy-paste above cell***
 
 def make_plot(capstyle):
-    
+
     # set up fig
     fig, ax = plt.subplots(figsize=(18,2), dpi=400) # this is just a fancier way of making plots
     ax.plot(date, [1]*len(date), marker='o', lw=0)
@@ -582,7 +597,7 @@ But looking at this, I'm realizing I also don't like this blue over magenta, so 
 ## **NOTE!! don't need to re-do the function, just edit the one above w/a copy-paste!
 
 def make_plot(capstyle, linecolor='m'):
-    
+
     # set up fig
     fig, ax = plt.subplots(figsize=(18,2), dpi=400) # this is just a fancier way of making plots
     ax.plot(date, [1]*len(date), marker='o', lw=0)
@@ -636,12 +651,13 @@ make_plot("round", linecolor='y')
 ```
 
 ## Take away
+
 We can see with the above example a few things:
 
- 1. that we can express the same data in a few different ways, in this case with a graph of GDP vs. time and also a timeline
- 1. We also notice that even small things like how we terminate lines in plots can have a significant effect on the information a viewer takes away from a plot $\rightarrow$ whether or not the GDP is high (or low, though we never even saw the low point!) outside of our actual measurement points or not
- 
-This was admittedly a bit of a silly example, *but* it highlights the necessity of being careful with our representations of data so we don't accidentally mislead our viewer.  It also highlighted something we'll do often in this class -- build up a plotting routine and then save it as a function to play with different plotting parameters.
+1.  that we can express the same data in a few different ways, in this case with a graph of GDP vs. time and also a timeline
+1.  We also notice that even small things like how we terminate lines in plots can have a significant effect on the information a viewer takes away from a plot $\rightarrow$ whether or not the GDP is high (or low, though we never even saw the low point!) outside of our actual measurement points or not
+
+This was admittedly a bit of a silly example, _but_ it highlights the necessity of being careful with our representations of data so we don't accidentally mislead our viewer. It also highlighted something we'll do often in this class -- build up a plotting routine and then save it as a function to play with different plotting parameters.
 
 +++
 
@@ -650,7 +666,8 @@ This was admittedly a bit of a silly example, *but* it highlights the necessity 
 +++
 
 ## We can also use python to make diagrams
-* This uses matplotlib.patches
+
+- This uses matplotlib.patches
 
 ```{code-cell} ipython3
 # lets re-do that diagram of the angular distribution of human vision we had in the slides
@@ -669,21 +686,21 @@ facecolor_bincFOV = "#ff7f0e" # orangish
 
 # (1)
 totalFOV = matplotlib.patches.Wedge([0.0, 0.0], 1.0, 90 - (210/2.0), 90 + (210/2.0), # span of the wedge
-                                    lw=2.0, 
-                                    facecolor=facecolor_totalFOV, 
+                                    lw=2.0,
+                                    facecolor=facecolor_totalFOV,
                                     edgecolor=edgecolor)
 
 # (3) lets put this other wedge definition up here with the totalFOV one for consistency
-binoc = matplotlib.patches.Wedge([0.0, 0.0], 1.0, 90 - (114/2.0), 90 + (114/2.0), 
+binoc = matplotlib.patches.Wedge([0.0, 0.0], 1.0, 90 - (114/2.0), 90 + (114/2.0),
                                  width=0.25, # so that it doesn't overlap totally with total FOV
-                                 lw=2.0, 
+                                 lw=2.0,
                                  facecolor=facecolor_bincFOV, edgecolor=edgecolor)
 
-# (5) Finally, if we remember back to the figure, there was an arrow dictating 
+# (5) Finally, if we remember back to the figure, there was an arrow dictating
 #     the forward direction
 facecolor_arrow = "#aaaaaa"
-arrow = matplotlib.patches.Arrow(-1.10, 0.0, 0.0, 0.75, 
-                                 width=0.25, edgecolor=edgecolor, 
+arrow = matplotlib.patches.Arrow(-1.10, 0.0, 0.0, 0.75,
+                                 width=0.25, edgecolor=edgecolor,
                                  facecolor=facecolor_arrow)#, label="forward")
 
 
@@ -719,9 +736,10 @@ plt.show()
 ```
 
 ## Take away
-* so, that was a lot of effort (maybe) to make a diagram, *but* we can now go back and change things very easily 
-* for example we can change all the colors **do this**, or we can change the size of the wedge
-* the take away is that Python not only makes graphs, but it can also be used to make diagrams
+
+- so, that was a lot of effort (maybe) to make a diagram, _but_ we can now go back and change things very easily
+- for example we can change all the colors **do this**, or we can change the size of the wedge
+- the take away is that Python not only makes graphs, but it can also be used to make diagrams
 
 +++
 
@@ -730,7 +748,8 @@ plt.show()
 +++
 
 # Quick intro to image manipulation with Python
-* lets try with our stitch image
+
+- lets try with our stitch image
 
 +++
 
@@ -741,7 +760,7 @@ I had to run this to "fix" the colors of this image, but you shouldn't have to d
 ```{code-cell} ipython3
 # note: for this to work you might have to install pillow
 #  either with pip: pip3 install pillow (might have to use sudo)
-#  or anaconda: conda install -c anaconda pillow 
+#  or anaconda: conda install -c anaconda pillow
 # Also, I think there is a way to do it using the GUI, but I've never used the Anaconda GUI to install things before
 import PIL.Image as Image
 #data = np.array(Image.open("https://uiuc-ischool-dataviz.github.io/spring2019online/week01/images/stitch_nobg_tilted.png", "r"))
@@ -761,7 +780,7 @@ np.unique(data[:,:,0]) # check out just 1 color
 ```
 
 ```{code-cell} ipython3
-# so why is there a full range in a 3 color image?  
+# so why is there a full range in a 3 color image?
 #  this is just because the pixelation has done some interpolating
 # so lets fix it!
 
@@ -786,7 +805,7 @@ for i in range(data.shape[0]):
         elif (data[i,j,3] == 0): # transparent, set to black
             data[i,j,:] = (0,0,0,0)
 
-            
+
 # lets check out our figure
 fig,ax = plt.subplots(figsize=(10,10))
 ax.imshow(Image.fromarray(data))
@@ -794,7 +813,7 @@ ax.imshow(Image.fromarray(data))
 im = Image.fromarray(data)
 im.show()
 
-#data            
+#data
 ```
 
 ```{code-cell} ipython3
@@ -835,7 +854,7 @@ ax.imshow(im)
 plt.show()
 ```
 
-We know from our discussion in class that measuring Stitch's levels of goodness or badness from this image are not very accurate.  Let's now use pixel filling to determine the volumetric good and bad levels more accurately!
+We know from our discussion in class that measuring Stitch's levels of goodness or badness from this image are not very accurate. Let's now use pixel filling to determine the volumetric good and bad levels more accurately!
 
 ```{code-cell} ipython3
 ngood = (data[:,:,0] == 255).sum() # number of "good" pixels, white inside
@@ -848,7 +867,7 @@ goodness = ngood/  total # goodness as % of total
 print(badness, goodness)
 ```
 
-So, it looks like ~77% bad and 23% good.  Does that match up with what you'd think from looking at the above figure?
+So, it looks like ~77% bad and 23% good. Does that match up with what you'd think from looking at the above figure?
 
 Let's try a few other methods of visualizing this very silly dataset:
 

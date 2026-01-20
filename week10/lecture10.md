@@ -14,7 +14,7 @@ description: >-
 
 # Final Project
 
-Your final project, to be completed in (assigned) groups, is to build a semi-realtime "observatory" of data.  You can find a few different possibilities for the data, but I want to encourage you to think of data related to things like:
+Your final project, to be completed in (assigned) groups, is to build a semi-realtime "observatory" of data. You can find a few different possibilities for the data, but I want to encourage you to think of data related to things like:
 
 - Earthquakes
 - Space weather, rocks and satellites
@@ -26,7 +26,7 @@ Your final project, to be completed in (assigned) groups, is to build a semi-rea
 
 # Final Project: Phases
 
-Your final project will have three phases, each of which will have a component for you to turn in.  The second and third components will be turned in as a group, but the first component will be individually graded.
+Your final project will have three phases, each of which will have a component for you to turn in. The second and third components will be turned in as a group, but the first component will be individually graded.
 
 **Before beginning, clear your dataset with me, Esther and Tali.**
 
@@ -36,39 +36,37 @@ Some places to look for dataset ideas:
 - [Public APIs](https://github.com/public-apis/public-apis)
 - [Awesome JSON](https://github.com/jdorfman/awesome-json-datasets)
 
-
 ---
 
 # Final Project: Part One
 
-The first part of your project will be to *explore* the data; this is worth **30 points out of 100**.  You are to turn in a notebook -- whether in Observable, Python, Iodide, or a *combination* of them, that includes every single cell and step you took in exploring the data.  This is an example of the "visualization for self" process.  This means you might take shortcuts, you might make mistakes, and you might make really, really awful visualizations.
+The first part of your project will be to _explore_ the data; this is worth **30 points out of 100**. You are to turn in a notebook -- whether in Starboard, Python, or a _combination_ of them, that includes every single cell and step you took in exploring the data. This is an example of the "visualization for self" process. This means you might take shortcuts, you might make mistakes, and you might make really, really awful visualizations.
 
 Showing that you explored the data individually (even if you did it while talking to a collaborator or classmate) is enough to satisfy this portion of the project.
 
-Download the data.  Dig in to it.  Look at it.  Find interesting things. Experiment.  Make plots, make summary statistics, and make it familiar to yourself.
+Download the data. Dig in to it. Look at it. Find interesting things. Experiment. Make plots, make summary statistics, and make it familiar to yourself.
 
 ---
 
 # Final Project: Part Two
 
-The second component of your project will be to design your "observatory." Note that this is *pseudo* realtime.  It does not need to *automatically* update its data; a refresh button, or requiring a page reload, is sufficient.  This is worth **40 points out of 100**.
+The second component of your project will be to design your "observatory." Note that this is _pseudo_ realtime. It does not need to _automatically_ update its data; a refresh button, or requiring a page reload, is sufficient. This is worth **40 points out of 100**.
 
-This could consist of drawings, prototypes of web pages or notebooks, and the code necessary to build the different components.  This component is *scaffolding*, not the final product.  It should be thought of as the "viz for peers" stage of the process.  You can submit drawings (including photos of drawings), jamboards, notebooks (which you *are* allowed to clean up), and stages of prototypes.
+This could consist of drawings, prototypes of web pages or notebooks, and the code necessary to build the different components. This component is _scaffolding_, not the final product. It should be thought of as the "viz for peers" stage of the process. You can submit drawings (including photos of drawings), jamboards, notebooks (which you _are_ allowed to clean up), and stages of prototypes.
 
 You should walk me through the process of how you built your observatory, and it does not need to be a linear, successes-only process.
-
 
 ---
 
 # Final Project: Part Three
 
-The final component of your project will be an in-class presentation of your work, and the deployment of that work online.  This will be worth **30 points out of 100**.
+The final component of your project will be an in-class presentation of your work, and the deployment of that work online. This will be worth **30 points out of 100**.
 
-Your "observatory" should be located somewhere online, either as a notebook I can download and run (or that runs on [binder](https://mybinder.org/)) or view on observable, starboard, or Github Pages.
+Your "observatory" should be located somewhere online, either as a notebook I can download and run (or that runs on [binder](https://mybinder.org/)) or view on Starboard or Github Pages.
 
-You will also have five minutes, as a *group*, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process.
+You will also have five minutes, as a _group_, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process.
 
-These presentations will be on the 30th of April.  The project will be due by the end of finals week, but you are **strongly encouraged** to submit earlier.
+These presentations will be on the 30th of April. The project will be due by the end of finals week, but you are **strongly encouraged** to submit earlier.
 
 ---
 
@@ -76,10 +74,9 @@ These presentations will be on the 30th of April.  The project will be due by th
 
 The last few weeks, we have focused strongly on the technology behind visualizations.
 
-We're going to spend a bit of time at the start of each class working on the *techniques* behind the visualizations.
+We're going to spend a bit of time at the start of each class working on the _techniques_ behind the visualizations.
 
 Today, we want to ask the question: how do we compare the elements that compose a whole?
-
 
 ---
 
@@ -94,9 +91,7 @@ pie charts force you to analyze things by area or angle, which are multidimensio
 
 which is the most popular zoo animal in this pie chart? Elephants, otters, or lions?
 
-
 ---
-
 
 ## Composition
 
@@ -109,9 +104,7 @@ we can make a marginal improvement by labeling the values.
 
 But we wouldn't be doing visualization if we were interested in just reading text.
 
-
 ---
-
 
 ## Composition
 
@@ -126,7 +119,6 @@ And if 2-dimensional area is difficult to understand, then 3-dimensional volume 
 
 The sizes of shaded areas in a visualization need to be proportional to the data values they represent.
 
-
 ---
 
 ## Alternatives
@@ -138,22 +130,18 @@ Some people will try to sell you on a modified version of a pie chart called a d
 
 But circles are still hard to decipher.
 
-
 ---
-
 
 ## Alternatives
 
 <!-- .slide: data-background-image="images/treemap.png" data-background-size="auto 65%" data-background-position="right 50% bottom 50%" -->
 
 notes:
-We can reduce some of the confusion associated with using circles by creating proportional *rectangular* area. Now we can compare along the dimensions of height and width for certain values.
+We can reduce some of the confusion associated with using circles by creating proportional _rectangular_ area. Now we can compare along the dimensions of height and width for certain values.
 
 But area is still problematic because it asks us to compare two dimensions - width and height - simultaneously.
 
-
 ---
-
 
 ## Alternatives
 
@@ -162,9 +150,7 @@ But area is still problematic because it asks us to compare two dimensions - wid
 notes:
 you can show comparitive values more effectively with a bar chart though. These values are easily compared along just one dimension.
 
-
 ---
-
 
 ## Alternatives
 
@@ -172,7 +158,6 @@ you can show comparitive values more effectively with a bar chart though. These 
 
 notes:
 there are really quite a few alternatives. There are many ways to show data stacking up progressively. This waterfall chart shows how each value is part of a whole, which was sort of the idea of the pie chart.
-
 
 ---
 
@@ -183,9 +168,7 @@ there are really quite a few alternatives. There are many ways to show data stac
 notes:
 to compare values from multiple sources, you could use collected columns
 
-
 ---
-
 
 ## Comparison
 
@@ -194,9 +177,7 @@ to compare values from multiple sources, you could use collected columns
 notes:
 Or to show they're part of a whole, use a stacked column chart
 
-
 ---
-
 
 ## Comparison
 
@@ -205,16 +186,13 @@ Or to show they're part of a whole, use a stacked column chart
 notes:
 or to show a time-series, use connected lines that stack on top of each other to show area across the whole canvass. This shows you trends and specific vertical values.
 
-
 ---
-
 
 ## Comparison
 
 This is not a good idea.
 
 ![](images/comparepiecharts.png)
-
 
 ---
 
@@ -229,7 +207,6 @@ This often happens for hierarcical data.
 Here in this example we want to show proportions of land based mammals that
 are popular at the zoo and then as we move out we subdivide by the individual
 animal species.
-
 
 ## Hierarchical data: example packages
 
@@ -249,7 +226,6 @@ animal species.
 
 </div> </div>
 
-
 ---
 
 ## Putting this Together
@@ -264,7 +240,6 @@ It must have these characteristics:
 
 How can we utilize our transforms, filters and view composition to this end?
 
-
 ---
 
 ## Linking and Brushing
@@ -275,14 +250,13 @@ We will update our visualization to include:
 1. Display county-by-county visualizations for Illinois
 1. State-by-state counties, based on state selection
 
-
 ---
 
 ## Step 1: Display a Map
 
 1. Find a GeoJSON map of the United States
-	1. By State
-	2. By County
+   1. By State
+   2. By County
 2. Utilize the `geoshape` mark.
 3. Apply a tooltip.
 

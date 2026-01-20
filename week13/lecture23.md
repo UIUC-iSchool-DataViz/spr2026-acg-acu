@@ -145,7 +145,7 @@ Some places to look for dataset ideas:
 
 The first part of your project will be to _explore_ the data; this is worth
 **30 points out of 100**. You are to turn in a notebook -- whether in
-Observable, Python, Iodide, or a _combination_ of them, that includes every
+Starboard, Python, or a _combination_ of them, that includes every
 single cell and step you took in exploring the data. This is an example of the
 "visualization for self" process. This means you might take shortcuts, you
 might make mistakes, and you might make really, really awful visualizations.
@@ -187,7 +187,7 @@ out of 100**.
 
 Your "observatory" should be located somewhere online, either as a notebook I
 can download and run (or that runs on [binder](https://mybinder.org/)) or view
-on observable, iodide, or Github Pages.
+on Starboard or Github Pages.
 
 You will also have five minutes, as a _group_, to present your work in class.
 This presentation needs to include the final product, as well as a summary of
@@ -202,7 +202,7 @@ earlier.
 ## Review of D3 Basics
 
 Last week we covered the very basics of [d3.js](https://d3js.org/), using
-[observablehq.com](https://observablehq.com).
+[starboard.gg](https://starboard.gg).
 
 Review topics:
 
