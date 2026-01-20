@@ -7,11 +7,11 @@
   faicon: fa-book
   weight: 10
 - name: Campuswire
-  url: https://campuswire.com/c/GC79A285B
+  url: https://campuswire.com/c/G194FC743
   facollection: fab
   faicon: fa-comment
   weight: 20
 - name: PrairieLearn
-  url: https://us.prairielearn.com/pl/course_instance/192343
+  url: https://us.prairielearn.com/pl/course_instance/208117
   faicon: fa-school
   weight: 50

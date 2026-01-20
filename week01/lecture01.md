@@ -24,15 +24,14 @@ Website.](https://chancellor.illinois.edu/land_acknowledgement.html)
 
 ## Basics
 
-9:00AM-11:50AM, W-109 Turner Hall
+3:30PM-4:50PM, 126 iSchool (501 E Daniel)
 
 ### Instructors & TAs
 
 Matthew Turk - `mjturk@illinois.edu`  
 Office Hours: **By appointment**
 
-- Yilin Xia - `yilinx2@illinois.edu`
-- Jingyuan Chen - `jc190@illinois.edu`
+- Hunter DeMeyer - `demeyer3@illinois.edu`
 
 https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/
 
@@ -43,9 +42,9 @@ https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/
 ## Summary of Locations
 
 - Grades and assignment links will be on [Canvas](https://canvas.illinois.edu/).
-- PrairieLearn: https://us.prairielearn.com/pl/course_instance/192343 where assignments will be completed.
+- PrairieLearn: https://us.prairielearn.com/pl/course_instance/208117 where assignments will be completed.
 - Course repo is at [UIUC-iSchool-DataViz/spr2026-acg-acu](https://github.com/UIUC-iSchool-DataViz/spr2026-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/spr2026-acg-acu/](https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/). Lecture notes, notebooks, data and course info will be placed there.
-- CampusWire: https://campuswire.com/c/GC79A285B - the best place to ask questions in a channel either about the homework or about the general discussion of a language or framework.
+- CampusWire: https://campuswire.com/c/G194FC743 - the best place to ask questions in a channel either about the homework or about the general discussion of a language or framework.
 
 You are invited to clone the repo, fork and submit changes (typos, etc!), and to use any information in it in the future.
 
