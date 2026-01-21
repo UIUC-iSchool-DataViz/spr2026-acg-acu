@@ -26,5 +26,11 @@ urls:
     name: Course Materials
     url: https://uiuc-ischool-dataviz.github.io/spr2026-acg-acu/
   -
+    name: PrairieLearn
+    url: https://us.prairielearn.com/pl/course_instance/208117
+  -
     name: Github
     url: https://github.com/UIUC-iSchool-DataViz/spr2026-acg-acu/
+  -
+    name: CampusWire
+    url: https://campuswire.com/c/G194FC743

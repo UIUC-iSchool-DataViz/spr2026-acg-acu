@@ -139,9 +139,6 @@ We might start getting into javascript earlier, depending on how we are doing.
 - Weeks 11-16: Platforms and dimensionality (Python, HTML/Javascript, Web-dev methods)
 
 notes:
-basically, we'll start with the basics - I'm assuming you are coming in with Python experience
-
-notes:
 This is a rough syllabus! These are many of the topics we will cover, but
 based on how the course proceeds and how folks respond, we may shorten or
 lengthen different topics.
@@ -253,8 +250,6 @@ This is an _introduction_ to data visualization - we will focus on the _fundamen
 - Wrap-up (as needed)
 
 This isn't the first time we've taught this course, but we are always trying new things. This semester, we're going to be focusing much more on separating apart the theory and the practice of visualization, and we're also going to be using PrairieLearn so that we can try out different tools.
-
-![[images/structure-of-class 2023-08-18 15.06.16.excalidraw.svg]]
 
 notes:
 This structure will likely be deviated from during the course, but in general we will start with lecture, take a break, then continue with collaborative or hands-on exercises using group coding.
@@ -389,9 +384,9 @@ There'll be a few more along the way.
 
 We will be sharing a Campuswire channel with the in-person class, so feel free to converse with them as well!
 
-- CampusWire channel at [https://campuswire.com/p/GC79A285B](https://campuswire.com/p/GC79A285B)
+- CampusWire channel at [https://campuswire.com/c/G194FC743](https://campuswire.com/p/G194FC743)
   - `#general` : General announcements, place to ask questions
-  - `#random` : see a cool viz you want to share? This is the place!
+  - `#misc` : see a cool viz you want to share? This is the place!
   - `#introduce-yourself` : where you want to "say hi" for Homework #1
 
 ---
@@ -412,8 +407,8 @@ Questions about grades should *always* be over email.
 
 ## How do I access CampusWire?
 
-- https://campuswire.com/p/GC79A285B with the code I gave in class and email
-- Send an email to Yilin or Jingyuan
+- https://campuswire.com/c/G194FC743 with the code I gave in class and email
+- Send an email to me or Hunter
 
 ---
 
