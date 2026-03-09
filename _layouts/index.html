@@ -22,16 +22,10 @@ layout: default
 
 <section class="section">
   <div class="container">
-    <h1>Lectures and Materials</h1>
+    <h1>Course Schedule</h1>
     <hr />
-    {% assign sorted_pages = site.html_pages | sort:"path" %} {% assign
-    week_pages = sorted_pages | where: "layout", "week" | where: "visible", true
-    %} {% for f in week_pages %} {% assign tags = "" | split: ", " %} {% assign
-    subpages = sorted_pages | where: "dir", f.dir %} {% assign lectures =
-    subpages | where: "layout", "lecture" | sorted: "date" %} {% assign
-    assignments = subpages | where: "layout", "assignment" | sorted: "date" %}
-    {% for subpage in subpages %} {% assign tags = tags | concat: subpage.tags
-    %} {% endfor %} {% assign tags = tags | uniq %}
+    {% assign week_pages = site.weeks | sort: "path" %}
+    {% for f in week_pages %}
     <div class="columns">
       <div class="column is-one-quarter">
         <div class="has-text-centered">
@@ -48,68 +42,24 @@ layout: default
           <h3 class="subtitle">
             <a href="{{f.url | relative_url }}">{{f.title}}</a>
           </h3>
-          <p>
-            {% for tag in tags %}
-            <span class="tag" data-tag="{{tag}}"> {{tag}} </span>
-            {% endfor %}
-          </p>
         </div>
       </div>
       <div class="column">
-        {% for lecture in lectures %}
-        <article class="media">
-          <figure class="media-left">
-            <span class="icon is-large"
-              ><i class="fas fa-3x fa-chalkboard-teacher"></i
-            ></span>
-          </figure>
-          <div class="media-content">
-            <p>
-              <a href="{{lecture.url | relative_url }}">{{ lecture.title }}</a>
-            </p>
-            <p>{{ lecture.description}}</p>
-          </div>
-        </article>
-        {% endfor %}
+        <div class="content">
+            {{ f.content | strip_html | truncatewords: 50 }}
+        </div>
         <hr />
-        <div class="columns">
-          {% for assignment in assignments %}
-          <div class="column has-text-centered">
-            <div>
-              <p>
-                <span class="icon is-large"
-                  ><i class="fas fa-2x fa-pencil-ruler"></i
-                ></span>
-              </p>
-              <p>
-                <a href="{{assignment.url | relative_url }}"
-                  >{{ assignment.title }}</a
-                >
-              </p>
+        <div class="columns is-multiline">
+          {% for module_name in f.modules %}
+            {% assign module = site.modules | where: "slug", module_name | first %}
+            {% if module %}
+            <div class="column is-half">
+                <div class="box">
+                    <p><strong><a href="{{ module.url | relative_url }}">{{ module.title }}</a></strong></p>
+                    <p class="is-size-7">{{ module.content | strip_html | truncatewords: 20 }}</p>
+                </div>
             </div>
-          </div>
-          {% endfor %} {% for example in f.examples %}
-          <div class="column has-text-centered">
-            <div>
-              <p>
-                <span class="icon is-large"
-                  ><i class="fas fa-2x fa-chart-line"></i
-                ></span>
-              </p>
-              <p>
-                {% if example.type == "ipynb" %}
-                <a
-                  href="{{f.dir | append: example.filename | relative_url }}.html"
-                  >{{example.title}}</a
-                >
-                {% else %}
-                <a href="{{f.dir | append: example.filename | relative_url }}"
-                  >{{example.title}}</a
-                >
-                {% endif %}
-              </p>
-            </div>
-          </div>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
@@ -118,21 +68,3 @@ layout: default
     {% endfor %}
   </div>
 </section>
-<script>
-  window.addEventListener("load", (event) => {
-    for (var tag of document.querySelectorAll("span.tag")) {
-      tag.addEventListener("click", (event) => {
-        // First turn off all the previous elements
-        var tagName = event.target.dataset["tag"];
-        var justToggle = event.target.classList.contains("is-success");
-        for (var t of document.querySelectorAll("span.tag")) {
-          t.classList.remove("is-success");
-        }
-        if (justToggle) return;
-        for (var t of document.querySelectorAll(`[data-tag="${tagName}"]`)) {
-          t.classList.add("is-success");
-        }
-      });
-    }
-  });
-</script>

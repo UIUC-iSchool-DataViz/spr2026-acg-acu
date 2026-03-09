@@ -6,12 +6,7 @@
   url: /syllabus
   faicon: fa-book
   weight: 10
-- name: Campuswire
-  url: https://campuswire.com/c/G194FC743
-  facollection: fab
-  faicon: fa-comment
+- name: LMS (e.g. Canvas)
+  url: https://canvas.illinois.edu/
+  faicon: fa-graduation-cap
   weight: 20
-- name: PrairieLearn
-  url: https://us.prairielearn.com/pl/course_instance/208117
-  faicon: fa-school
-  weight: 50

@@ -1,54 +1,47 @@
-# Course Template
+# Course Website Template
 
-This repository is a template for managing coursework using GitHub pages. It
-uses the theme [dinky](https://github.com/pages-themes/dinky),
-[nbviewer.js](https://github.com/kokes/nbviewer.js), and
-[reveal.js](https://revealjs.com/) for presenting material.
+This is a template repository for creating course websites using Jekyll. It is designed to be modular and easy to maintain.
 
-For each week of class, create a subdirectory `weekZZ` (where `ZZ` is the week
-of the class) and place any `.ipynb` and `.md` files in that directory.
-Lectures can utilize the layout `lecture`, which will present them in revealjs.
+## Structure
 
-## Notes on Course Materials
+- `_modules/`: Contains reusable course content (lessons, labs, readings).
+- `_weeks/`: Defines the weekly schedule, referencing modules.
+- `_data/`: Configuration for class info, menu items, and topics.
+- `_layouts/`: Jekyll layouts for weeks, modules, lectures (Reveal.js), and more.
+- `scripts/`: Scaffolding tools for adding new content.
 
-As of Fall 2020, this section and the [section developed in parallel by Jill
-Naiman](https://github.com/UIUC-iSchool-DataViz/is445AOG_fall2020/) have
-diverged somewhat. Occasionally, contributions will be passed back and forth
-and the commit message history may not reflect the original authorship.
+## Getting Started
 
-These two repositories have been developed in collaboration, and authorship is
-shared between Matthew Turk and Jill Naiman.
+1.  **Configure**: Update `_config.yml` and `_data/class.yml` with your course details.
+2.  **Scaffold**: Use the provided `Makefile` or Python script to add content.
+    - `make module NAME=my_module`
+    - `make week NUM=1`
+3.  **Serve**: Run `make serve` to preview the site locally.
 
-## Development
+## Modular Content
 
-### Jupytext and Pre-commit
+Each week in `_weeks/` can include one or more modules from `_modules/` by referencing their slug in the `modules` front-matter list.
 
-This repository uses `jupytext` to manage Jupyter notebooks. This allows us to
-store notebooks as markdown files, which are easier to diff and merge. We use
-`pre-commit` to automatically sync the `.ipynb` and `.md` files.
+```yaml
+---
+layout: week
+title: Introduction
+modules:
+  - course_intro
+  - basic_setup
+---
+```
 
-To set this up:
+## Scaffolding Tool
 
-1.  Install `pre-commit`:
-    ```bash
-    pip install pre-commit
-    ```
-2.  Install the git hooks:
-    ```bash
-    pre-commit install
-    ```
+The `scripts/scaffold.py` script helps you quickly create new modules and weeks.
 
-### Adding a New Notebook
+```bash
+python3 scripts/scaffold.py module introduction
+python3 scripts/scaffold.py week 1
+```
 
-To add a new notebook to the repository:
+## Requirements
 
-1.  Create your notebook as usual (e.g., `my_notebook.ipynb`).
-2.  Pair the notebook with a markdown file using `jupytext`. You can do this via the command line:
-    ```bash
-    jupytext --set-formats ipynb,md my_notebook.ipynb
-    ```
-3.  Stage the files for commit.
-    ```bash
-    git add my_notebook.ipynb my_notebook.md
-    ```
-4.  Commit your changes. The `pre-commit` hook should ensure consistency.
+- Ruby and Jekyll
+- Python 3 (for scaffolding)

@@ -1,9 +1,19 @@
-# https://github.com/dhobsd/asciitosvg
-A2S=/home/mturk/Development/asciitosvg/a2s
-%.svg : %.atxt
-	$(A2S) -i$< -o$@
+.PHONY: all clean serve module week
 
-all: $(addsuffix .svg, $(basename $(wildcard week*/diagrams/*.atxt)))
+all:
+	@echo "Available commands:"
+	@echo "  make serve      - Run Jekyll server"
+	@echo "  make module NAME=name - Create a new module"
+	@echo "  make week NUM=n   - Create a new week"
+
+serve:
+	bundle exec jekyll serve --livereload
+
+module:
+	python3 scripts/scaffold.py module $(NAME)
+
+week:
+	python3 scripts/scaffold.py week $(NUM)
 
 clean:
-	rm week*/diagrams/*.svg
+	rm -rf _site

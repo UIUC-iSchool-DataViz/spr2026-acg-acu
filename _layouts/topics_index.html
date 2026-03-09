@@ -16,8 +16,7 @@ layout: default
   </div>
 </section>
 
-{% assign sorted_pages = site.html_pages | sort:"path" %} {% for topic in
-site.data.topics %}
+{% for topic in site.data.topics %}
 <section class="section">
   <div class="container">
     <h2 class="title">{{ topic.name }}</h2>
@@ -25,57 +24,39 @@ site.data.topics %}
     <hr />
 
     <div class="columns is-multiline">
-      {% for week_num in topic.weeks %} {% capture week_dir %}/week{% if
-      week_num < 10 %}0{% endif %}{{ week_num }}/{% endcapture %} {% assign
-      week_landing = sorted_pages | where: "dir", week_dir | where: "layout",
-      "week" | first %} {% assign subpages = sorted_pages | where: "dir",
-      week_dir %} {% assign lectures = subpages | where: "layout", "lecture" |
-      sort: "date" %} {% if week_landing or lectures.size > 0 %}
+      {% for week_num in topic.weeks %}
+      {% assign week_path = "_weeks/week" | append: (week_num | floor | prepend: "00" | slice: -2, 2) | append: ".md" %}
+      {% assign week = site.weeks | where: "relative_path", week_path | first %}
+      
+      {% if week %}
       <div class="column is-half">
         <div class="card">
           <header class="card-header">
             <p class="card-header-title">
-              Week {{ week_num }}: {{ week_landing.title }}
+              Week {{ week_num }}: {{ week.title }}
             </p>
           </header>
           <div class="card-content">
             <div class="content">
               <ul>
-                {% for lecture in lectures %}
+                {% for module_name in week.modules %}
+                {% assign module = site.modules | where: "slug", module_name | first %}
+                {% if module %}
                 <li>
-                  <a href="{{ lecture.url | relative_url }}"
-                    >{{ lecture.title }}</a
-                  >
+                  <a href="{{ module.url | relative_url }}">{{ module.title }}</a>
                 </li>
-                {% endfor %} {% for example in week_landing.examples %}
-                <li>
-                  <span class="tag is-info is-light">Notebook</span>
-                  {% if example.type == "ipynb" %}
-                  <a
-                    href="{{ week_dir | append: example.filename | replace: '.ipynb', '.html' | relative_url }}"
-                    >{{example.title}}</a
-                  >
-                  {% else %}
-                  <a
-                    href="{{ week_dir | append: example.filename | relative_url }}"
-                    >{{example.title}}</a
-                  >
-                  {% endif %}
-                </li>
+                {% endif %}
                 {% endfor %}
               </ul>
             </div>
           </div>
           <footer class="card-footer">
-            <a
-              href="{{ week_landing.url | relative_url }}"
-              class="card-footer-item"
-              >View Week {{ week_num }} Page</a
-            >
+            <a href="{{ week.url | relative_url }}" class="card-footer-item">View Week {{ week_num }} Page</a>
           </footer>
         </div>
       </div>
-      {% endif %} {% endfor %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>
